@@ -1,4 +1,4 @@
-# Kairos
+# Kairós
 Sistema para contagem e validação de horas e atividades complementadores - UFMS
 
 Sistema desenvolvido para a disciplina de 
