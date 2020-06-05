@@ -1,7 +1,6 @@
-<img src="/assets/readme-header" alt="Kairós Header" width="100%" align="center">
+<img src="assets/readme-header.png" alt="Kairós Header" width="100%" align="center">
 
-
-<img src="/assets/icon-kairos.png" alt="Kairós Icon" width="100px" align="right">
+<img src="assets/icon-kairos.png" alt="Kairós Icon" width="100px" align="right">
 
 # Kairós
 
@@ -37,3 +36,4 @@ Kairós e o conceito grego do tempo útil, a história de Kairós, filho de Cron
  - [Trello](https://trello.com/b/5IWCaqvt/projeto-kair%C3%B3s)
  - [brModelo](http://www.sis4.com/brModelo/)
  - [Lebre](https://github.com/luizfpq/lebre)
+ - [Insomnia](https://insomnia.rest/)
