@@ -1,3 +1,6 @@
+<img src="/assets/readme-header" alt="Kairós Header" width="100%" align="center">
+
+
 <img src="/assets/icon-kairos.png" alt="Kairós Icon" width="100px" align="right">
 
 # Kairós
