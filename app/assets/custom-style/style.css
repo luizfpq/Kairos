@@ -1,12 +1,12 @@
 h1,h2,h3,h4,h5,h6,.h3{
-	font-family: 'Poppins', sans-serif;
-	font-weight: 800!important;
+	font-family: Roboto Mono;
+	font-weight: 700!important;
 	margin-bottom: 0;
 	text-transform: uppercase;
 }
 
 p,a,button{
-	font-family: 'Montserrat', sans-serif;
+	font-family: Roboto Mono;
 	font-weight: 300;
 }
 
@@ -31,7 +31,7 @@ a,a:hover{
 	padding: 15px 30px;
 }
 .header nav{
-	background: #16ADB6;
+	background: #84CD98;
 	padding: 15px 30px;
 }
 .header nav a{
@@ -44,7 +44,7 @@ a,a:hover{
 
 .header nav .active{
 	background: #fff;
-	color: #16ADB6;
+	color: #84CD98;
 	border-radius: 30px;
 }
 
@@ -66,13 +66,13 @@ input,button{
 }
 
 .btn-primary,.btn-primary:hover{
-	background: #16ADB6;
-	border-color:#16ADB6;
+	background: #84CD98;
+	border-color:#84CD98;
 }
 
 .btn-secondary,.btn-secondary:hover{
-	background: #DF3150;
-	border-color:#DF3150;
+	background: #f7869b;
+	border-color:#F7869B;
 }
 
 
