@@ -3,7 +3,7 @@
 class LogonDao
 {
 
-  const _table = 'volunteer';
+  const _table = 'tbl_usuario';
 
   public function __construct(){}
 
