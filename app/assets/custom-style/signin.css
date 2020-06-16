@@ -6,7 +6,9 @@ h1,h2,h3,h4,h5,h6{
 .hero-img{
 	background: url("../img/logon-bg.png");
 	background-size: cover;
-	background-position: center;
+	background-position: left;
+	position: relative;
+	left: 50px;
 }
 .form-wrapper{	
 	margin-top: auto;
