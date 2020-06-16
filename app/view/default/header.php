@@ -7,7 +7,7 @@
 				<div class="brand">
 					<a href="index.php?controller=Index&action=index">
 						<img src="assets/img/logo-2.png" alt="" width="36" height="36" class="float-left">
-						<h3 class="text-left">Kair&ocute;s</h3>
+						<h3 class="text-left">Kair&oacute;s</h3>
 					</a>
 				</div>
 			</div>

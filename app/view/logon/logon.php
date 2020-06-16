@@ -6,7 +6,7 @@
   	<link href="https://fonts.googleapis.com/css?family=Poppins:100,400,800&display=swap" rel="stylesheet">
 
 
-    <title>Kair&ocute;s | Identifique-se</title>
+    <title>Kair&oacute;s | Identifique-se</title>
 
     <!-- Principal CSS do Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -22,7 +22,7 @@
 	  			<div class="container heading-form">
 	  				<div class="row brand">
 	  					<div class="col-4 col-lg-5"><img class="mb-4 float-right" src="assets/img/logo-2.png" alt="" width="72" height="72"></div>
-	  					<div class="col"><h1 class="text-left">Kair&ocute;s</h1></div>
+	  					<div class="col"><h1 class="text-left">Kair&oacute;s</h1></div>
 	  				</div>
 	  			</div>
 		      <label for="inputEmail" class="sr-only">Endereço de email</label>
@@ -35,7 +35,7 @@
 		        </label>
 		      </div>
 		      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-		      <p class="mt-5 mb-3 text-muted">Kair&ocute;s &copy; 2019</p>
+		      <p class="mt-5 mb-3 text-muted">Kair&oacute;s &copy; 2019</p>
 		    </form>
   		</div>
   		<div class="col-lg-6 hero-img"></div>

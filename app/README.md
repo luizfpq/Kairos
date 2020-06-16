@@ -1,4 +1,4 @@
-# Sistema Kair&ocute;s para o trabalho de conclusão semestral do curso de LDSOO - UFMS 2019.1
+# Sistema Kair&oacute;s para o trabalho de conclusão semestral do curso de LDSOO - UFMS 2019.1
 
 Utilizando recursos demonstrados em aula, com dashboard bootstrap.
 
