@@ -31,14 +31,24 @@ class Database
 	 * @var string
 	 * @access private
 	 */
+
 	private $array = array ('sgbd'		=> 'PostgreSQL',
+	'host'		=> 'ec2-52-87-135-240.compute-1.amazonaws.com',
+	'name'		=> 'd7p8j9jsirnvjj',
+	'port'		=> '5432',
+	'schema'	=> 'public',
+	'user'		=> 'mqgmpaliwwyqeg',
+	'password' 	=> 'acabc0b7b877afd0ea92e58f5547a661584efa989b640f4d31a44bf9547d491e');
+	 
+
+	/* private $array = array ('sgbd'		=> 'PostgreSQL',
 									'host'		=> 'ec2-34-204-22-76.compute-1.amazonaws.com',
 									'name'		=> 'deg42btap8des9',
 									'port'		=> '5432',
 									'schema'	=> 'public',
 									'user'		=> 'zvraimhwsxhxda',
 									'password' 	=> 'dae41e947cb2c5c568e1d05b5b358ac6090772fafca39695a099784de13b7225');
-
+*/
 	/**
 	 * Class constructor.
 	 * Designed for singleton.
