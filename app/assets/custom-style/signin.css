@@ -1,0 +1,32 @@
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Poppins', sans-serif;
+}
+
+
+.hero-img{
+	background: url("../img/logon-bg.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.form-wrapper{	
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.form-signin{
+	padding: 15px 30px;
+	max-width: 800px;
+	margin-left: auto;
+}
+.form-signin h1{
+	line-height: 2;
+	font-weight: 800!important;
+}
+.form-signin input,.form-signin button{
+	margin: 15px 0;
+	border-radius: 30px;
+}
+
+.btn-primary,.btn-primary:hover{
+	background: #16ADB6;
+	border-color:#16ADB6;
+}

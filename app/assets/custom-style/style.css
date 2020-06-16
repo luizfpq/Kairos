@@ -1,0 +1,177 @@
+h1,h2,h3,h4,h5,h6,.h3{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 800!important;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+p,a,button{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+}
+
+a,a:hover{
+	text-decoration: none!important;
+}
+
+.header{
+	border-bottom: 1px #ccc solid;
+	background: #FFF;
+}
+
+.header a{
+	color:#333;
+}
+
+.header .col{
+	margin-bottom: auto;
+	margin-top: auto;
+}
+.header .topbar{
+	padding: 15px 30px;
+}
+.header nav{
+	background: #16ADB6;
+	padding: 15px 30px;
+}
+.header nav a{
+	color: #fff;
+}
+
+.form-control{
+	margin-top: 0;
+}
+
+.header nav .active{
+	background: #fff;
+	color: #16ADB6;
+	border-radius: 30px;
+}
+
+
+.brand img{
+	margin-right: 10px;
+}
+.brand h3{
+	line-height: 1.5;
+}
+
+input,button{
+	margin: 15px 0;
+	border-radius: 30px;
+}
+
+.btn{
+	border-radius: 30px;
+}
+
+.btn-primary,.btn-primary:hover{
+	background: #16ADB6;
+	border-color:#16ADB6;
+}
+
+.btn-secondary,.btn-secondary:hover{
+	background: #DF3150;
+	border-color:#DF3150;
+}
+
+
+.sidebar{
+	padding-top: 150px;
+	background-size:cover;
+	background-position: center;
+
+	background-color: rgba(22,173,182,0.05);
+
+	padding-left: 0;
+	padding-right: 0;
+}
+.sidebar .list-group-item{
+	background:none;
+}
+.sidebar-wrapper{
+	display: block;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.content{
+	margin-top: 70px;
+	margin-bottom: 70px;
+}
+.content .col{
+	margin:0 15px;
+}
+.content .row{
+	margin-bottom: 45px;
+}
+.card{
+	border:none;
+	box-shadow: #ccc 0px 0px 5px;
+	padding: 0 0;
+}
+.card-header{
+	border:none;
+	padding: 20px 20px;
+}
+.card-header h5{
+	margin: 0;
+	padding:4px 0;
+}
+.card-header button{
+	margin: 0;
+}
+.card-body{
+	margin-top: auto;
+	margin-bottom: auto;
+	padding: 0;
+}
+.card-body a h5{
+	font-weight: 400 !important;
+}
+.card-body a{
+	border:none;
+	border-top: 1px solid #ccc;
+}
+
+.resume .card-body{
+	padding: 20px 25px;
+}
+.activities, .activities:hover{
+	background: #F8AA06;
+	border: none;
+}
+.sectors{
+	background: #0B3450;
+	border: none;
+}
+.volunteers{
+	background: #9CB307;
+	border: none;
+}
+
+.btn-danger{
+	border: none;
+}
+
+.resume a{
+	color: #fff;
+}
+.resume h6{
+	margin-bottom: 12px;
+}
+
+footer .row{
+	padding:75px 0;
+}
+
+footer .row p{
+	text-align: center;
+}
+
+.datepicker-here{
+	margin: 0 auto;
+}
+.datepicker{
+	border:none;
+}

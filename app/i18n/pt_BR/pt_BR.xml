@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18n language="pt_BR">
+
+<message from="Home" to="Inicial" />
+
+<message from="New User" to="Novo Usuário" />
+
+<message from="New Group" to="Novo Grupo" />
+
+<message from="New Action" to="Nova Ação" />
+
+<message from="New Section" to="Nova Seção" />
+
+<message from="Hello" to="Olá" />
+
+<message from="Users" to="Usuários" />
+
+<message from="Logoff" to="Sair" />
+
+</i18n>
