@@ -3,14 +3,14 @@
 class VolunteerActivity{
 	private $user;
 	private $activity;
-    private $time;
-    private $sector;
-    private $id;
-    private $create;
-    private $volunteer;
-    private $schedule;
-		private $description;
-		private $date;
+  private $time;
+  private $sector;
+  private $id;
+  private $create;
+  private $volunteer;
+  private $schedule;
+	private $description;
+	private $date;
 
 
 	public function __construct(){}
