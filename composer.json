@@ -6,7 +6,6 @@
     },
     "scripts": {
       "post-install-cmd": [
-        "php artisan clear-compiled",
         "chmod -Rf 777 app/"
     ]
     }
