@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
 RewriteCond %{REQUEST_URI} !^public
-RewriteRule ^(.*)$ app/$1 [L]
+RewriteRule ^(.+)$ app/$1 [NC,L,QSA]
 </IfModule>

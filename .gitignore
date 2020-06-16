@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+#composer
+'/vendor/'
+vendor/autoload.php
+vendor/composer/autoload_real.php
+vendor/composer/autoload_static.php
