@@ -1,6 +1,6 @@
-<img src="assets/img/readme-header.png" alt="Kairós Header" width="100%" align="center">
+<img src="app/assets/img/readme-header.png" alt="Kairós Header" width="100%" align="center">
 
-<img src="assets/img/icon-kairos.png" alt="Kairós Icon" width="100px" align="right">
+<img src="app/assets/img/logo-2.png" alt="Kairós Icon" width="100px" align="right">
 
 # Kairós
 
