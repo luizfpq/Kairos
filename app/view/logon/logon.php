@@ -34,7 +34,7 @@
   <img src="assets/img/blog-post-amico.png" class="login-img-right">
 </div>
 
-  <form class="form-signin">
+  <form class="form-signin" action="index.php?controller=Logon&action=logon" method="post">
   <h1 class="form-signin-title-text">Login</h1>
   <h2 class="form-signin-msg-text">Entre com sua conta</h2>
   <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>

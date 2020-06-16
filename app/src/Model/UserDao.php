@@ -9,7 +9,7 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "INSERT INTO volunteer (username,email, password) VALUES (?,?,?)";
+    $sql = "INSERT INTO tbl_usuario (username,email, password) VALUES (?,?,?)";
 
     $sth = $db->prepare($sql);
 
@@ -31,7 +31,7 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM volunteer WHERE id = ?";
+    $sql = "SELECT * FROM tbl_usuario WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -55,7 +55,7 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "UPDATE volunteer SET username = ?, email =  ? WHERE id = ?";
+    $sql = "UPDATE tbl_usuario SET username = ?, email =  ? WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -73,7 +73,7 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "UPDATE volunteer SET locale = ? WHERE id = ? ";
+    $sql = "UPDATE tbl_usuario SET locale = ? WHERE id = ? ";
 
     $sth = $db->prepare($sql);
 
@@ -89,7 +89,7 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "DELETE FROM volunteer WHERE id = ?";
+    $sql = "DELETE FROM tbl_usuario WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
@@ -103,7 +103,7 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM  volunteer";
+    $sql = "SELECT * FROM  tbl_usuario";
 
     $sth = $db->prepare($sql);
 
@@ -131,7 +131,7 @@ class UserDao
 
     foreach($user->getGroup() as $group)
     {
-      $sql = 'INSERT INTO user_group (volunteer,"group") VALUES (?,?)';
+      $sql = 'INSERT INTO user_group (tbl_usuario,"group") VALUES (?,?)';
 
       $sth = $db->prepare($sql);
 
