@@ -26,16 +26,15 @@
   </head>
   <body class="text-center">
 
-<img src="../assets/img/icon-kairos.png" class="icon-logo">
+<img src="assets/img/icon-kairos.png" class="icon-logo">
 <p name="logo" class="title-logo">
   &middot; Kair&oacute;s
 </p>
 <div name="login-img-right" class="div-login-img-right">
-  <img src="../assets/img/blog-post-amico.png" class="login-img-right">
+  <img src="assets/img/blog-post-amico.png" class="login-img-right">
 </div>
 
   <form class="form-signin">
-  <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
   <h1 class="form-signin-title-text">Login</h1>
   <h2 class="form-signin-msg-text">Entre com sua conta</h2>
   <input type="email" id="email" name="email" class="form-control" placeholder="Email" required autofocus>
