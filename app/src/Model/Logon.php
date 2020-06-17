@@ -6,11 +6,11 @@ class Logon
 
   public function __construct() { }
 
-  public function setUser($email, $password)
+  public function setUser($email, $senha)
   {
     $this->user = new User();
     $this->user->setEmail($email);
-    $this->user->setPassword($password);
+    $this->user->setSenha($senha);
   }
 
   public function getUser()

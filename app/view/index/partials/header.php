@@ -11,7 +11,7 @@
 				</div>
 			</div>
 			<div class="col">
-		        <a class="float-right" href="#"><i class="fas fa-user-circle"></i> Quirino</a>
+		        <a class="float-right" href="#"><i class="fas fa-user-circle"></i> </a>
 		    </div>
 		</div>
 		<div class="row">

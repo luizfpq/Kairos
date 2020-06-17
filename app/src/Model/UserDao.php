@@ -9,33 +9,35 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "INSERT INTO tbl_usuario (username,email, password) VALUES (?,?,?)";
+    $sql = "INSERT INTO tbl_usuario (nome, login, senha, email) VALUES (?,?,?,?)";
 
     $sth = $db->prepare($sql);
 
-    $sth->bindValue(1, $user->getUsername(), PDO::PARAM_STR);
+    $sth->bindValue(1, $user->getNome(), PDO::PARAM_STR);
 
-    $sth->bindValue(2, $user->getEmail(), PDO::PARAM_STR);
+    $sth->bindValue(2, $user->getLogin(), PDO::PARAM_STR);
 
-    $sth->bindValue(3, sha1($user->getPassword()), PDO::PARAM_STR);
+    $sth->bindValue(3, sha1($user->getSenha()), PDO::PARAM_STR);
+    
+    $sth->bindValue(4, sha1($user->getEmail()), PDO::PARAM_STR);
 
     if($sth->execute())
-      return $db->lastInsertId();;
+      return $db->lastInsertId();
 
     return false;
 
   }
 
-  public function getById($id)
+  public function getById($id_usuario)
   {
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM tbl_usuario WHERE id = ?";
+    $sql = "SELECT * FROM tbl_usuario WHERE id_usuario = ?";
 
     $sth = $db->prepare($sql);
 
-    $sth->bindValue(1, $id, PDO::PARAM_STR);
+    $sth->bindValue(1, $id_usuario, PDO::PARAM_STR);
 
     $sth->execute();
 
@@ -43,9 +45,11 @@ class UserDao
     {
       $user = new User();
 
-      $user->setUsername($obj->username);
+      $user->setId_usuario($obj->id_usuario);
+      $user->setNome($obj->nome);
+      $user->setLogin($obj->login);
       $user->setEmail($obj->email);
-      $user->setId($obj->id);
+      $user->setNivel($obj->nivel);
 
       return $user;
     }
@@ -55,15 +59,15 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "UPDATE tbl_usuario SET username = ?, email =  ? WHERE id = ?";
+    $sql = "UPDATE tbl_usuario SET nome = ?, login = ?, email =  ?, nivel = ? WHERE id = ?";
 
     $sth = $db->prepare($sql);
 
-    $sth->bindValue(1, $user->getUsername(), PDO::PARAM_STR);
-
-    $sth->bindValue(2, sha1($user->getEmail()), PDO::PARAM_STR);
-
-    $sth->bindValue(3, $user->getId(), PDO::PARAM_STR);
+    $sth->bindValue(1, $user->getNome(), PDO::PARAM_STR);
+    $sth->bindValue(2, sha1($user->getLogin()), PDO::PARAM_STR);
+    $sth->bindValue(3, $user->getEmail(), PDO::PARAM_STR);
+    $sth->bindValue(4, $user->getNivel(), PDO::PARAM_STR);
+    $sth->bindValue(5, $user->getId(), PDO::PARAM_STR);
 
     $sth->execute();
 
@@ -73,23 +77,23 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "UPDATE tbl_usuario SET locale = ? WHERE id = ? ";
+    $sql = "UPDATE tbl_usuario SET locale = ? WHERE id_usuario = ? ";
 
     $sth = $db->prepare($sql);
 
     $sth->bindValue(1, $user->getLocale(), PDO::PARAM_STR);
 
-    $sth->bindValue(2, $user->getId(), PDO::PARAM_STR);
+    $sth->bindValue(2, $user->getId_usuario(), PDO::PARAM_STR);
 
     $sth->execute();
 
   }
 
-  public function delete($id){
+  public function delete($id_usuario){
 
     $db = Database::singleton();
 
-    $sql = "DELETE FROM tbl_usuario WHERE id = ?";
+    $sql = "DELETE FROM tbl_usuario WHERE id_usuario = ?";
 
     $sth = $db->prepare($sql);
 
@@ -114,9 +118,12 @@ class UserDao
     while($obj = $sth->fetch(PDO::FETCH_OBJ))
     {
       $user = new User();
-      $user->setUsername($obj->username);
+    
+      $user->setId_usuario($obj->id_usuario);
+      $user->setNome($obj->nome);
+      $user->setLogin($obj->login);
       $user->setEmail($obj->email);
-      $user->setId($obj->id);
+      $user->setNivel($obj->nivel);
 
       $users[] = $user;
 
@@ -135,7 +142,7 @@ class UserDao
 
       $sth = $db->prepare($sql);
 
-      $sth->bindValue(1, $user->getId(), PDO::PARAM_STR);
+      $sth->bindValue(1, $user->getId_usuario(), PDO::PARAM_STR);
 
       $sth->bindValue(2, $group, PDO::PARAM_STR);
 

@@ -20,12 +20,12 @@
   </head>
   <body class="text-center">
 
-<img src="assets/img/icon-kairos.png" class="icon-logo">
+<img src="assets/img/logo-2.png" class="icon-logo">
 <p name="logo" class="title-logo">
   &middot; Kair&oacute;s
 </p>
 <div name="login-img-right" class="div-login-img-right">
-  <img src="assets/img/blog-post-amico.png" class="login-img-right">
+  <img src="assets/img/logon-bg.png" class="login-img-right">
 </div>
 
   <form class="form-signin" action="index.php?controller=Logon&action=logon" method="post">

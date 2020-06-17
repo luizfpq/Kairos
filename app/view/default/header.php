@@ -13,8 +13,8 @@
 			</div>
 			<div class="col">
 				<div class="float-right">
-					<a href="#"><i class="fas fa-user-circle"></i> <?php echo "&middot; {$user->getUsername()} &middot;"; ?></a>
-					<a href="index.php?controller=Logon&action=logoff"><i class="fa fa-sign-out" aria-hidden="true"></i> <?php echo "Sair"; ?></a>
+					<a href="#"><i class="fas fa-user-circle"></i> <?php echo "Bem vind@, {$user->getLogin()} !"; ?></a>
+					<a href="index.php?controller=Logon&action=logoff"><i class="fa fa-window-close" title="Logout"></i> Sair</a>
 				</div>
 
 
@@ -31,14 +31,7 @@
 				    	echo '<a class="nav-link" href="index.php?controller=Index&action=index">Início</a>';
 				    ?>
 				  </li>
-				  <li class="nav-item">
-				  	<?php
-				  	if($page_subject == "Schedule" || $page_subject == "VolunteerActivity")
-				    	echo '<a class="nav-link active" href="?controller=Schedule&action=schedule"><i class="fas fa-calendar-check"></i> Eventos</a>';
-				    else
-				    	echo '<a class="nav-link" href="index.php?controller=Schedule&action=schedule">Eventos</a>';
-				    ?>
-				  </li>
+				  
 				  <li class="nav-item">
 				    <?php
 				  	if($page_subject == "Activity")
@@ -47,20 +40,14 @@
 				    	echo '<a class="nav-link" href="index.php?controller=Activity&action=activity">Atividades</a>';
 				    ?>
 				  </li>
+				 
+
 				  <li class="nav-item">
 				    <?php
-				  	if($page_subject == "Sector")
-				    	echo '<a class="nav-link active" href="?controller=Sector&action=sector"><i class="fas fa-chart-pie"></i> Setores</a>';
+				  	if($page_subject == "Activity")
+				    	echo '<a class="nav-link active" href="?controller=Activity&action=activity"><i class="fas fa-tasks"></i> menu novo</a>';
 				    else
-				    	echo '<a class="nav-link" href="index.php?controller=Sector&action=sector">Setores</a>';
-				    ?>
-				  </li>
-				  <li class="nav-item">
-				    <?php
-				  	if($page_subject == "Volunteer")
-				    	echo '<a class="nav-link active" href="?controller=Volunteer&action=volunteer"><i class="fas fa-hands-helping"></i> Voluntários</a>';
-				    else
-				    	echo '<a class="nav-link" href="index.php?controller=Volunteer&action=volunteer">Voluntários</a>';
+				    	echo '<a class="nav-link" href="index.php?controller=Activity&action=activity">menu novo</a>';
 				    ?>
 				  </li>
 				</ul>
