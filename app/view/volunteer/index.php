@@ -9,8 +9,8 @@
 			<div class="container-fluid">
 				<div class="row mb-0">
 					<div class="col">
-						<h1 class="float-left"><i class="fas fa-hands-helping" aria-hidden="true"></i> Voluntários</h1>
-						<a href="?controller=Volunteer&action=create" class="float-right btn btn-primary volunteers" style="border:none"><i class="fas fa-plus"></i> Novo voluntário</a>
+						<h1 class="float-left"><i class="fa fa-hands-helping" aria-hidden="true"></i> Voluntários</h1>
+						<a href="?controller=Volunteer&action=create" class="float-right btn btn-primary volunteers" style="border:none"><i class="fa fa-plus"></i> Novo voluntário</a>
 					</div>
 				</div>
 				<div class="row">
@@ -44,9 +44,9 @@
 										<td><?php echo $volunteer->getUsername() ?></td>
 										<td><?php echo $volunteer->getEmail()?></td>
 										<td>
-										<a href="index.php?controller=Volunteer&action=update&id=<?php echo $volunteer->getId() ?>" class="btn btn-sm volunteers btn-primary"><i class="fas fa-pen"></i> Editar</a>
+										<a href="index.php?controller=Volunteer&action=update&id=<?php echo $volunteer->getId() ?>" class="btn btn-sm volunteers btn-primary"><i class="fa fa-pen"></i> Editar</a>
 
-										<a href="index.php?controller=Volunteer&action=delete&id=<?php echo $volunteer->getId() ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
+										<a href="index.php?controller=Volunteer&action=delete&id=<?php echo $volunteer->getId() ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remover</a>
 
 
 										</td>

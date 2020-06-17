@@ -8,8 +8,8 @@
 			<div class="container-fluid">
 				<div class="row mb-0">
 					<div class="col">
-						<h1 class="float-left"><i class="fas fa-tags"></i> categorias</h1>
-						<a href="?controller=Category&action=create" class="float-right btn btn-primary activities" style="border:none"><i class="fas fa-plus"></i> Nova categoria</a>
+						<h1 class="float-left"><i class="fa fa-tags"></i> categorias</h1>
+						<a href="?controller=Category&action=create" class="float-right btn btn-primary activities" style="border:none"><i class="fa fa-plus"></i> Nova categoria</a>
 					</div>
 				</div>
 				<div class="row">
@@ -44,9 +44,9 @@
 										<td><?php echo $activity->getDescription()?></td>
 										<td><?php echo $activity->getSector()?></td>
 										<td>
-										<a href="index.php?controller=Categoryy&action=update&id=<?php echo $category->getId() ?>" class="btn btn-sm activities btn-primary"><i class="fas fa-pen"></i> Editar</a>
+										<a href="index.php?controller=Categoryy&action=update&id=<?php echo $category->getId() ?>" class="btn btn-sm activities btn-primary"><i class="fa fa-pen"></i> Editar</a>
 
-										<a href="index.php?controller=Categoryy&action=delete&id=<?php echo $category->getId() ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
+										<a href="index.php?controller=Categoryy&action=delete&id=<?php echo $category->getId() ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remover</a>
 
 
 										</td>

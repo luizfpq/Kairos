@@ -1,0 +1,3 @@
+usamos de base o modelo do bootstrap pricing
+disponivel no link:
+view-source:https://getbootstrap.com.br/docs/4.1/examples/pricing/

@@ -9,7 +9,7 @@
 			<form class="container-fluid" action="index.php?controller=Sector&action=update&id=<?php echo $sector->getId(); ?>" method="post">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-pen"></i> Atualizar setor</h1>
+						<h1><i class="fa fa-pen"></i> Atualizar setor</h1>
 						<hr>
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 				</div>
 
 				<div class="row">
-					<button type="submit" class="col sectors btn btn-lg btn-primary" name="submit"><i class="fas fa-check"></i> Salvar setor</button>
+					<button type="submit" class="col sectors btn btn-lg btn-primary" name="submit"><i class="fa fa-check"></i> Salvar setor</button>
 				</div>
 			</form>
 		</div>

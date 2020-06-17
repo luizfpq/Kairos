@@ -8,7 +8,7 @@
 			<form class="container-fluid">
 				<div class="row">
 					<div class="col-md-8">
-						<h1><i class="fas fa-calendar-day"></i> Detalhes do evento</h1>
+						<h1><i class="fa fa-calendar-day"></i> Detalhes do evento</h1>
 						<hr>
 						<div class="form-group">
 						    <label for="description">Descrição do evento</label>
@@ -58,8 +58,8 @@
 				</div>
 
 				<div class="row">
-					<a href="?controller=Schedule&action=update" class="col col-md-3 btn btn-lg btn-primary"><i class="fas fa-pen"></i> Editar evento</a>
-					<a href="?controller=Schedule&action=delete" class="col col-md-3 btn btn-lg btn-danger"><i class="fas fa-trash"></i> Remover evento</a>
+					<a href="?controller=Schedule&action=update" class="col col-md-3 btn btn-lg btn-primary"><i class="fa fa-pen"></i> Editar evento</a>
+					<a href="?controller=Schedule&action=delete" class="col col-md-3 btn btn-lg btn-danger"><i class="fa fa-trash"></i> Remover evento</a>
 
 				</div>
 			</form>

@@ -11,7 +11,7 @@
 
 				<div class="row">
 					<div class="col-md-8">
-						<h1><i class="fas fa-hands-helping"></i> Editar volunt&aacute;rio</h1>
+						<h1><i class="fa fa-hands-helping"></i> Editar volunt&aacute;rio</h1>
 						<hr>
 						<div class="form-group">
 						    <label for="name">Nome do volunt&aacute;rio</label>

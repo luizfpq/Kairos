@@ -80,9 +80,9 @@ input,button{
 	padding-top: 150px;
 	background-size:cover;
 	background-position: center;
-
+	/* descomente para colocar uma cor no fundo da sidebar
 	background-color: rgba(22,173,182,0.05);
-
+	*/
 	padding-left: 0;
 	padding-right: 0;
 }

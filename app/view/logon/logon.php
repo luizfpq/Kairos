@@ -29,10 +29,19 @@
 		        </label>
 		      </div>
 		      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-		      <p class="mt-5 mb-3 text-muted">Kair&oacute;s &copy; 2020</p>
 		    </form>
   		</div>
   		<div class="col-lg-6 hero-img"></div>
   	</div>
+    <!-- Image and text -->
+<nav class="navbar fixed-bottom navbar-light bg-light">
+  <a class="navbar-brand text-muted w-100" href="#">
+    <img src="assets\img\logo-mono.png" width="32" style="margin-bottom: 5px;opacity: 0.6">
+    <small>
+    Kair&oacute;s &copy; 2020&nbsp;&nbsp;&nbsp;&nbsp;-
+    Desenvolvido por Lucas Padilha e Luiz Quirino.
+  </small>
+  </a>
+</nav>
   </body>
 </html>

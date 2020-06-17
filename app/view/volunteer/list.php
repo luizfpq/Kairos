@@ -8,7 +8,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-hands-helping"></i> Listagem de usuários</h1>
+						<h1><i class="fa fa-hands-helping"></i> Listagem de usuários</h1>
 
             <table class="table table-hover table-condensed">
               <thead>
@@ -30,9 +30,9 @@
                     <td><?php echo $volunteer->getUsername() ?></td>
                     <td><?php echo $volunteer->getEmail()?></td>
                     <td>
-                    <a href="index.php?controller=Volunteer&action=update&id=<?php echo $volunteer->getId() ?>" class="btn btn-sm activities btn-primary"><i class="fas fa-pen" aria-hidden="true"></i> Editar</a>
+                    <a href="index.php?controller=Volunteer&action=update&id=<?php echo $volunteer->getId() ?>" class="btn btn-sm activities btn-primary"><i class="fa fa-pen" aria-hidden="true"></i> Editar</a>
 
-                    <a href="index.php?controller=Volunteer&action=delete&id=<?php echo $volunteer->getId() ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash" aria-hidden="true"></i> Remover</a>
+                    <a href="index.php?controller=Volunteer&action=delete&id=<?php echo $volunteer->getId() ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Remover</a>
 
 
                     </td>
@@ -50,7 +50,7 @@
 					</div>
 					<div class="card col">
 						<div class="card-header">
-							<h5 class="card-title float-left"><i class="fas fa-fire-alt"></i>Seus Próximos evento</h5>
+							<h5 class="card-title float-left"><i class="fa fa-fire-alt"></i>Seus Próximos evento</h5>
 						</div>
 					  <div class="card-body">
 					    <div class="list-group">
@@ -64,7 +64,7 @@
 						</div>
 					  </div>
 					  <div class="card-footer">
-					  	<span><i class="fas fa-tags"></i> Leilão, Rotaract, Illuminati</span>
+					  	<span><i class="fa fa-tags"></i> Leilão, Rotaract, Illuminati</span>
 					  </div>
 					</div>
 				</div>
@@ -81,9 +81,9 @@
 
 					<div class="card col">
 						<div class="card-header">
-							<h5 class="card-title float-left"><i class="fas fa-tags"></i> Categorias</h5>
+							<h5 class="card-title float-left"><i class="fa fa-tags"></i> Categorias</h5>
 							<a href="?controller=VolunteerCategory&action=list" class="btn btn-sm btn-secondary float-right">
-								<small><i class="fas fa-eye"></i> Ver todas</small>
+								<small><i class="fa fa-eye"></i> Ver todas</small>
 							</a>
 						</div>
 					  <div class="card-body">

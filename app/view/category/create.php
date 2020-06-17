@@ -8,7 +8,7 @@
 			<form class="container-fluid">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-plus"></i> Nova categoria</h1>
+						<h1><i class="fa fa-plus"></i> Nova categoria</h1>
 						<hr>
 					</div>
 				</div>
@@ -31,7 +31,7 @@
 				</div>
 				
 				<div class="row">
-					<button type="submit" class="col activities btn btn-lg btn-primary"><i class="fas fa-plus"></i> Nova categoria</button>
+					<button type="submit" class="col activities btn btn-lg btn-primary"><i class="fa fa-plus"></i> Nova categoria</button>
 				</div>
 			</form>
 		</div>

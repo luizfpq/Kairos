@@ -15,7 +15,7 @@
 			<form class="container-fluid" action="index.php?controller=Activity&action=update&id=<?php echo $activity->getId(); ?>" method="post">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-pen"></i> Atualizar atividade</h1>
+						<h1><i class="fa fa-pen"></i> Atualizar atividade</h1>
 						<hr>
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 				</div>
 
 				<div class="row">
-					<button type="submit" class="col activities btn btn-lg btn-primary" name="submit"><i class="fas fa-check"></i> Salvar atividade</button>
+					<button type="submit" class="col activities btn btn-lg btn-primary" name="submit"><i class="fa fa-check"></i> Salvar atividade</button>
 				</div>
 			</form>
 		</div>

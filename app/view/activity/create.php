@@ -13,7 +13,7 @@
 			<form class="container-fluid" action="index.php?controller=Activity&action=create" method="post">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-plus"></i> Nova atividade</h1>
+						<h1><i class="fa fa-plus"></i> Nova atividade</h1>
 						<hr>
 					</div>
 				</div>
@@ -54,7 +54,7 @@
 				<input type="hidden" name="user" value="<?php echo $user->getid(); ?>">
 				<input type="hidden" name="sector" value="<?php echo $user->getid(); ?>"> <?php // TODO: corrigir setor ?>
 				<div class="row">
-					<button type="submit" class="col activities btn btn-lg btn-primary" name="submit"><i class="fas fa-plus"></i> Nova atividade</button>
+					<button type="submit" class="col activities btn btn-lg btn-primary" name="submit"><i class="fa fa-plus"></i> Nova atividade</button>
 				</div>
 			</form>
 		</div>

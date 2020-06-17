@@ -58,7 +58,7 @@
 				</div>
 
 				<div class="row">
-					<button type="submit" class="col btn btn-lg btn-danger" name="submit"><i class="fas fa-trash"></i> Remover evento</button>
+					<button type="submit" class="col btn btn-lg btn-danger" name="submit"><i class="fa fa-trash"></i> Remover evento</button>
 				</div>
 			</form>
 		</div>

@@ -8,7 +8,7 @@
 			<form class="container-fluid">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-trash"></i> Remover categoria</h1>
+						<h1><i class="fa fa-trash"></i> Remover categoria</h1>
 						<hr>
 					</div>
 				</div>
@@ -31,7 +31,7 @@
 				</div>
 				
 				<div class="row">
-					<button type="submit" class="col btn btn-lg btn-danger"><i class="fas fa-trash"></i> Remover categoria</button>
+					<button type="submit" class="col btn btn-lg btn-danger"><i class="fa fa-trash"></i> Remover categoria</button>
 				</div>
 			</form>
 		</div>

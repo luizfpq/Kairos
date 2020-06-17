@@ -8,7 +8,7 @@
 			<form class="container-fluid" action="index.php?controller=Sector&action=create" method="post">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-plus"></i> Novo setor</h1>
+						<h1><i class="fa fa-plus"></i> Novo setor</h1>
 						<hr>
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 				<input type="hidden" name="user" id="user" value="<?php echo $user->getId(); ?>">
 				<input type="hidden" name="category" id="user" value="<?php echo $user->getId(); ?>">
 				<div class="row">
-					<button type="submit" class="col sectors btn btn-lg btn-primary" name="submit"><i class="fas fa-plus"></i> Novo setor</button>
+					<button type="submit" class="col sectors btn btn-lg btn-primary" name="submit"><i class="fa fa-plus"></i> Novo setor</button>
 				</div>
 			</form>
 		</div>

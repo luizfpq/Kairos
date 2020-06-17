@@ -8,8 +8,8 @@
 			<div class="container-fluid">
 				<div class="row mb-0">
 					<div class="col">
-						<h1 class="float-left"><i class="fas fa-tasks"></i> Atividades</h1>
-						<a href="?controller=Activity&action=create" class="float-right btn btn-primary activities" style="border:none"><i class="fas fa-plus"></i> Nova atividade</a>
+						<h1 class="float-left"><i class="fa fa-tasks"></i> Atividades</h1>
+						<a href="?controller=Activity&action=create" class="float-right btn btn-primary activities" style="border:none"><i class="fa fa-plus"></i> Nova atividade</a>
 					</div>
 				</div>
 				<div class="row">
@@ -45,9 +45,9 @@
 										<td><?php echo $activity->getDescription()?></td>
 										<td><?php echo $activity->getSector()?></td>
 										<td>
-										<a href="index.php?controller=Activity&action=update&id=<?php echo $activity->getId() ?>" class="btn btn-sm activities btn-primary"><i class="fas fa-pen"></i> Editar</a>
+										<a href="index.php?controller=Activity&action=update&id=<?php echo $activity->getId() ?>" class="btn btn-sm activities btn-primary"><i class="fa fa-pen"></i> Editar</a>
 
-										<a href="index.php?controller=Activity&action=delete&id=<?php echo $activity->getId() ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
+										<a href="index.php?controller=Activity&action=delete&id=<?php echo $activity->getId() ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remover</a>
 
 
 										</td>

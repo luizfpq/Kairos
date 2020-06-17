@@ -8,12 +8,12 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-calendar-check"></i> Eventos</h1>
+						<h1><i class="fa fa-calendar-check"></i> Eventos</h1>
 						<hr>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porta nulla ut pharetra aliquam. Vivamus auctor vitae metus sed suscipit. Mauris lacinia, velit in iaculis finibus, lacus mi tempor leo, vitae hendrerit dolor ligula a urna.
+
 						</p>
-						<a href="?controller=Schedule&action=create" class="btn btn-primary"><i class="far fa-calendar-plus"></i> Novo evento</a>
+						<!-- <a href="?controller=Schedule&action=create" class="btn btn-primary"><i class="far fa-calendar-plus"></i> Novo evento</a>-->
 					</div>
 
 				</div>

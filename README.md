@@ -38,4 +38,5 @@ Kairós e o conceito grego do tempo útil, a história de Kairós, filho de Cron
  - [Lebre](https://github.com/luizfpq/lebre)
  - [MarvelApp](https://marvelapp.com/)
  - [Icons8](https://icons8.com.br/)
+ - [Font Awesome](https://fontawesome.com/)
  - [Bootstrap - Builder](https://bootstrap.build/app)

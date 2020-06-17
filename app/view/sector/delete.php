@@ -9,7 +9,7 @@
 			<form class="container-fluid" action="index.php?controller=Sector&action=delete&id=<?php echo $sector->getId(); ?>" method="post">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-trash"></i> Remover setor</h1>
+						<h1><i class="fa fa-trash"></i> Remover setor</h1>
 						<hr>
 					</div>
 				</div>
@@ -32,7 +32,7 @@
 				</div>
 
 				<div class="row">
-						<button type="submit" class="col btn btn-lg btn-danger" name="submit"><i class="fas fa-trash"></i> Remover setor</button>
+						<button type="submit" class="col btn btn-lg btn-danger" name="submit"><i class="fa fa-trash"></i> Remover setor</button>
 				</div>
 			</form>
 		</div>

@@ -8,7 +8,7 @@
 			<form class="container-fluid" action="index.php?controller=Volunteer&action=create" method="post">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-hands-helping"></i> Novo volunt&aacute;rio</h1>
+						<h1><i class="fa fa-hands-helping"></i> Novo volunt&aacute;rio</h1>
 						<hr>
 						<div class="form-group">
 						    <label for="name">Nome do volunt&aacute;rio</label>
@@ -34,7 +34,7 @@
 				</div>
 
 				<div class="row">
-					<button type="submit" class="col volunteers btn btn-lg btn-primary" name="submit"><i class="fas fa-hands-helping"></i> Novo voluntário</button>
+					<button type="submit" class="col volunteers btn btn-lg btn-primary" name="submit"><i class="fa fa-hands-helping"></i> Novo voluntário</button>
 				</div>
 			</form>
 		</div>

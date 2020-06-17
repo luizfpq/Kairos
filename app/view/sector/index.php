@@ -8,8 +8,8 @@
 			<div class="container-fluid">
 				<div class="row mb-0">
 					<div class="col">
-						<h1 class="float-left"><i class="fas fa-chart-pie"></i> Setores</h1>
-						<a href="?controller=Sector&action=create" class="float-right btn btn-primary sectors" style="border:none"><i class="fas fa-plus"></i> Novo setor</a>
+						<h1 class="float-left"><i class="fa fa-chart-pie"></i> Setores</h1>
+						<a href="?controller=Sector&action=create" class="float-right btn btn-primary sectors" style="border:none"><i class="fa fa-plus"></i> Novo setor</a>
 					</div>
 				</div>
 				<div class="row">
@@ -43,9 +43,9 @@
 										<td><?php echo $sector->getName() ?></td>
 										<td><?php echo $sector->getDescription()?></td>
 										<td>
-										<a href="index.php?controller=Sector&action=update&id=<?php echo $sector->getId() ?>" class="btn btn-sm sectors btn-primary"><i class="fas fa-pen"></i> Editar</a>
+										<a href="index.php?controller=Sector&action=update&id=<?php echo $sector->getId() ?>" class="btn btn-sm sectors btn-primary"><i class="fa fa-pen"></i> Editar</a>
 
-										<a href="index.php?controller=Sector&action=delete&id=<?php echo $sector->getId() ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Remover</a>
+										<a href="index.php?controller=Sector&action=delete&id=<?php echo $sector->getId() ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remover</a>
 
 
 										</td>

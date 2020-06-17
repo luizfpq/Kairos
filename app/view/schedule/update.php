@@ -58,7 +58,7 @@
 				</div>
 
 				<div class="row">
-					<button type="submit" class="col btn btn-lg btn-primary" name="submit"><i class="fas fa-pen"></i> Salvar alterações</button>
+					<button type="submit" class="col btn btn-lg btn-primary" name="submit"><i class="fa fa-pen"></i> Salvar alterações</button>
 				</div>
 			</form>
 		</div>

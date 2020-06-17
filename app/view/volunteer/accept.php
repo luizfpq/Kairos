@@ -13,7 +13,7 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col">
-						<h1><i class="fas fa-fire-alt"></i> Seus eventos  </h1>
+						<h1><i class="fa fa-fire-alt"></i> Seus eventos  </h1>
 						<br />
 						<div class="card col">
 							<div class="card-header">
@@ -37,7 +37,7 @@
 						}
 							?>
 							<div class="card-footer">
-								<!-- <span><i class="fas fa-tags"></i> Leilão, Curso, Almoço</span> -->
+								<!-- <span><i class="fa fa-tags"></i> Leilão, Curso, Almoço</span> -->
 							</div>
 						</div>
 						<br />
@@ -57,9 +57,9 @@
 										</div>
 										<p>'. $event['description'] .'
 											<a href="?controller=Volunteer&action=acceptEvent&id='.$event['id'].'" class="btn btn-sm volunteer btn-primary float-right">
-										  <small><i class="fas fa-check" aria-hidden="true"></i> Aceitar </small></a>&nbsp;&nbsp;&nbsp;&nbsp;
+										  <small><i class="fa fa-check" aria-hidden="true"></i> Aceitar </small></a>&nbsp;&nbsp;&nbsp;&nbsp;
 											<a href="?controller=Volunteer&action=ignoreEvent&id='.$event['id'].'" class="btn btn-sm activities btn-primary float-right">
-										  <small><i class="fas fa-check" aria-hidden="true"></i> Negar </small></a>
+										  <small><i class="fa fa-check" aria-hidden="true"></i> Negar </small></a>
 									</p>
 
 								</div>
@@ -67,7 +67,7 @@
 						}
 							?>
 							<div class="card-footer">
-								<!-- <span><i class="fas fa-tags"></i> Leilão, Curso, Almoço</span> -->
+								<!-- <span><i class="fa fa-tags"></i> Leilão, Curso, Almoço</span> -->
 							</div>
 						</div>
 					</div>
