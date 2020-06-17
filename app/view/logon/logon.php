@@ -35,7 +35,7 @@
 		        </label>
 		      </div>
 		      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-		      <p class="mt-5 mb-3 text-muted">Kair&oacute;s &copy; 2019</p>
+		      <p class="mt-5 mb-3 text-muted">Kair&oacute;s &copy; 2020</p>
 		    </form>
   		</div>
   		<div class="col-lg-6 hero-img"></div>
