@@ -45,7 +45,7 @@ class UserDao
     {
       $user = new User();
 
-      $user->setId_usuario($obj->id_usuario);
+      $user->setId($obj->id_usuario);
       $user->setNome($obj->nome);
       $user->setLogin($obj->login);
       $user->setEmail($obj->email);
@@ -83,7 +83,7 @@ class UserDao
 
     $sth->bindValue(1, $user->getLocale(), PDO::PARAM_STR);
 
-    $sth->bindValue(2, $user->getId_usuario(), PDO::PARAM_STR);
+    $sth->bindValue(2, $user->getId(), PDO::PARAM_STR);
 
     $sth->execute();
 
@@ -119,7 +119,7 @@ class UserDao
     {
       $user = new User();
     
-      $user->setId_usuario($obj->id_usuario);
+      $user->setId($obj->id_usuario);
       $user->setNome($obj->nome);
       $user->setLogin($obj->login);
       $user->setEmail($obj->email);
@@ -142,7 +142,7 @@ class UserDao
 
       $sth = $db->prepare($sql);
 
-      $sth->bindValue(1, $user->getId_usuario(), PDO::PARAM_STR);
+      $sth->bindValue(1, $user->getId(), PDO::PARAM_STR);
 
       $sth->bindValue(2, $group, PDO::PARAM_STR);
 

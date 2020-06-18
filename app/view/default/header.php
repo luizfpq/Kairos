@@ -3,36 +3,47 @@
 ?>
 <body>
 	<!-- Header -->
-	<!--
-			<div class="col">
-				<div class="float-right">
-					<a href="#"><i class="fa fa-user-circle"></i> <?php echo "Bem vind@, {$user->getLogin()} !"; ?></a>
-					<a href=""> Sair</a>
-				</div>
--->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
 
-			<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-				<h5 class="my-0 mr-md-auto font-weight-normal">
-					<a href="index.php?controller=Index&action=index" style="vertical-align:middle">
-						<img src="assets/img/logo-2.png" alt="" width="36" height="36" class="float-left"> &nbsp; Kair&oacute;s
-					</a>
-				</h5>
-				<nav class="my-2 my-md-0 mr-md-3">
-					<!--  -->
-					<?php
-					if($page_subject == "Index" || $page_subject == "Logon")
-						echo '<a class="p-2 active" href="?controller=Index&action=index"><i class="fa fa-home"></i> Início</a>';
-					else
-						echo '<a class="p-2 text-dark" href="index.php?controller=Index&action=index">Início</a>';
-					?>
-					<!-- -->
-					<?php
-					if($page_subject == "Schedule")
-						echo '<a class="p-2 active" href="index.php?controller=Schedule&action=schedule"><i class="fa fa-tasks"></i> Atividades</a>';
-					else
-						echo '<a class="p-2 text-dark" href="index.php?controller=Schedule&action=schedule"> Atividades</a>';
-					?>
+  <a class="navbar-brand" href="index.php?controller=Index&action=index">
+	<img src="assets/img/logo-2.png" alt="" width="36" height="36" class="float-left"> &nbsp; Kair&oacute;s
+  </a>
 
-				</nav>
-				<a class="p-2 text-dark" href="index.php?controller=Logon&action=logoff"><i class='fa fa-sign-out'></i> Sair</a>
-			</div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarToggler">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+	  	<?php
+			if($page_subject == "Index" || $page_subject == "Logon")
+				echo '<a class="nav-link active" href="?controller=Index&action=index"><i class="fa fa-home"></i> Início</a>';
+			else
+				echo '<a class="nav-link" href="index.php?controller=Index&action=index">Início</a>';
+		?>
+      </li>
+			<li class="nav-item">
+	  <?php
+			if($page_subject == "User")
+				echo '<a class="nav-link active" href="index.php?controller=User&action=user"><i class="fa fa-users"></i> Usuários</a>';
+			else
+				echo '<a class="nav-link" href="index.php?controller=User&action=user"> Usuários</a>';
+		?>
+      </li>
+      <li class="nav-item">
+	  <?php
+			if($page_subject == "Schedule")
+				echo '<a class="nav-link active" href="index.php?controller=Schedule&action=schedule"><i class="fa fa-tasks"></i> Atividades</a>';
+			else
+				echo '<a class="nav-link" href="index.php?controller=Schedule&action=schedule"> Atividades</a>';
+		?>
+      </li>
+      <li class="nav-item">
+		<a class="nav-link" href="index.php?controller=Logon&action=logoff"><i class='fa fa-sign-out'></i> Sair</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>

@@ -25,7 +25,6 @@ class Controller
 
     if(!isset($user))
     {
-      //include ('view/admin/schedule/index.php');
       include ('view/logon/logon.php');
     }
     else

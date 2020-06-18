@@ -36,7 +36,7 @@
 	</div>
 
 		<div class="card col">
-			<div class="card-header">
+			<div class="card-header bg-light">
 				<h5 class="card-title my-0 font-weight-normal float-left"><i class="fa fa-calendar-check"></i>&nbsp;&nbsp;&nbsp;&nbsp; Aprovações pendentes</h4>
 				<a href="?controller=Schedule&action=schedule" class="btn btn-sm btn-secondary float-right">
 					<small><i class="far fa-calendar-alt"></i> Listar </small>

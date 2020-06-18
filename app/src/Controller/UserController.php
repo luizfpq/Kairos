@@ -1,6 +1,6 @@
 <?php
 
-class SectorController extends Controller
+class UserController extends Controller
 {
   private $view;
 
@@ -8,21 +8,21 @@ class SectorController extends Controller
 
   public function __construct(){
 
-    $this->view = new SectorView();
+    $this->view = new UserView();
   }
 
-  public function SectorAction(){
+  public function UserAction(){
 
     $message = Message::singleton();
 
-    $this->setRoute($this->view->getSectorRoute());
+    $this->setRoute($this->view->getIndexRoute());
 
-    $sectorDao = new SectorDao();
+    $userDao = new UserDao();
 
-    $sectors = $sectorDao->getAll();
+    $users = $userDao->getAll();
 
     $viewModel = array(
-        'sectors' => $sectors,
+        'users' => $users,
     );
 
     $this->showView($viewModel);
@@ -56,21 +56,21 @@ class SectorController extends Controller
             throw new Exception ('Preencha os campos ' . implode(', ', $warnings));
 
 
-          $sector = new Sector();
-          $sectorDao = new SectorDao();
+          $user = new User();
+          $userDao = new UserDao();
 
-          $sector->setName($name);
-          $sector->setDescription($description);
-          $sector->setUser($user);
-          $sector->setCategory($category);
+          $user->setName($name);
+          $user->setDescription($description);
+          $user->setUser($user);
+          $user->setCategory($category);
 
 
-          $sectorId = $sectorDao->create($sector);
+          $userId = $userDao->create($user);
 
-          $sector->setId($sectorId);
+          $user->setId($userId);
 
-          $this->setRoute($this->view->getSectorRoute());
-          
+          $this->setRoute($this->view->getIndexRoute());
+
           $message->addMessage('Setor adicionado com sucesso.');
       }
       catch(Exception $e)
@@ -99,18 +99,18 @@ class SectorController extends Controller
 
     $id = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
 
-    $sectorDao = new SectorDao();
+    $userDao = new UserDao();
 
     $viewModel = false;
 
     if(isset($_REQUEST['submit']))
     {
-      $this->setRoute($this->view->getSectorRoute());
+      $this->setRoute($this->view->getIndexRoute());
 
-      $sectorDao->delete($id);
+      $userDao->delete($id);
 
       $viewModel = array(
-          'sectors' => $sectorDao->getAll()
+          'users' => $userDao->getAll()
       );
     }
     else
@@ -118,7 +118,7 @@ class SectorController extends Controller
       $this->setRoute($this->view->getDeleteRoute());
 
       $viewModel = array(
-          'sector' => $sectorDao->getById($id)
+          'user' => $userDao->getById($id)
       );
     }
 
@@ -139,19 +139,19 @@ class SectorController extends Controller
       $name = isset($_REQUEST['name']) ? $_REQUEST['name'] : '';
       $description = isset($_REQUEST['description']) ? $_REQUEST['description'] : '';
 
-      $sector = new Sector();
-      $sector->setName($name);
-      $sector->setDescription($description);
-      $sector->setId($id);
+      $user = new User();
+      $user->setName($name);
+      $user->setDescription($description);
+      $user->setId($id);
 
 
-      $sectorDao = new SectorDao();
-      $sectorDao->update($sector);
+      $userDao = new UserDao();
+      $userDao->update($user);
 
-      $this->setRoute($this->view->getSectorRoute());
+      $this->setRoute($this->view->getIndexRoute());
 
       $viewModel = array(
-        'sectors' => $sectorDao->getAll()
+        'users' => $userDao->getAll()
       );
 
     }
@@ -159,10 +159,10 @@ class SectorController extends Controller
     {
       $this->setRoute($this->view->getUpdateRoute());
 
-      $sectorDao = new SectorDao();
+      $userDao = new UserDao();
 
       $viewModel = array(
-          'sector' => $sectorDao->getById($id)
+          'user' => $userDao->getById($id)
       );
     }
 

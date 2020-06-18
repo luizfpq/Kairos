@@ -25,7 +25,7 @@ class LogonDao
     {
       $user = new User();
      
-      $user->setId_usuario($obj->id_usuario);
+      $user->setId($obj->id_usuario);
       $user->setNome($obj->nome);
       $user->setLogin($obj->login);
       $user->setEmail($obj->email);
