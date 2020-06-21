@@ -1,6 +1,10 @@
 <html lang="pt-br">
   <head>
-    <meta charset="utf-8">
+	<meta charset="utf-8">
+	<?php
+	if(isset($_SESSION['user']))
+		echo"  <meta http-equiv=\"refresh\" content=\"0; URL='index.php?controller=Index&action=index'\"/>";
+	?>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="assets/img/logo-2.png">
   	<link href="https://fonts.googleapis.com/css?family=Poppins:100,400,800&display=swap" rel="stylesheet">
@@ -31,17 +35,17 @@
 		      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
 		    </form>
   		</div>
-  		<div class="col-lg-6 hero-img data-toggle="collapse""></div>
+  		<div name="hero-img" class="col-lg-6 hero-img" data-toggle="collapse"></div>
   	</div>
     <!-- Image and text -->
-<nav class="navbar fixed-bottom navbar-light bg-light">
-  <a class="navbar-brand text-muted w-100" href="#">
-    <img src="assets\img\logo-mono.png" width="32" style="margin-bottom: 5px;opacity: 0.6">
-    <small>
-    Kair&oacute;s &copy; 2020&nbsp;&nbsp;&nbsp;&nbsp;-
-    Desenvolvido por Lucas Padilha e Luiz Quirino.
-  </small>
-  </a>
-</nav>
+	<footer class="container-fluid bg-light">
+	<div class="row">
+		<p class="text-muted w-100">
+			<img src="assets\img\logo-mono.png" width="32" style="margin-bottom: 5px;opacity: 0.6"><br>
+			Kair&oacute;s &copy; 2020<br>
+			<small>Desenvolvido por Lucas Padilha e Luiz Quirino.</small>
+		</p>
+	</div>
+</footer>
   </body>
 </html>

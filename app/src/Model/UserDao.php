@@ -97,7 +97,7 @@ class UserDao
 
     $sth = $db->prepare($sql);
 
-    $sth->bindValue(1, $id, PDO::PARAM_STR);
+    $sth->bindValue(1, $id_usuario, PDO::PARAM_STR);
 
     $sth->execute();
 

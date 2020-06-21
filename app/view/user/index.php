@@ -1,14 +1,14 @@
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-2 sidebar">
-			<?php include 'sidebar.php' ?>
-		</div>
 <!-- Conteudo -->
-		<div class="content col-10">
-				<div class="row">
-					<div class="card resume col">
-
-						<table class="table">
+<div class="container">
+		<div class="card col">
+			<div class="card-header bg-light">
+				<h5 class="card-title my-0 font-weight-normal float-left"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;&nbsp; Usuários</h4>
+				<a href="?controller=Schedule&action=schedule" class="btn btn-sm btn-outline-primary float-right">
+					<small><i class="fa fa-plus"></i></small>
+				</a>
+			</div>
+			<div class="card-body">
+			<table class="table">
 						  <thead>
 						    <tr>
 						      <th scope="col">Nome</th>
@@ -27,9 +27,9 @@
 										<td><?php echo $user->getNome() ?></td>
 										<td><?php echo $user->getEmail()?></td>
 										<td>
-										<a href="index.php?controller=User&action=update&id=<?php echo $user->getId() ?>" class="btn btn-sm sectors btn-primary"><i class="fa fa-pen"></i> Editar</a>
+										<a href="index.php?controller=User&action=update&id=<?php echo $user->getId() ?>" class="btn btn-sm btn-outline-info" title="Editar"><i class="fa fa-pen"></i></a>
 
-										<a href="index.php?controller=User&action=delete&id=<?php echo $user->getId() ?>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remover</a>
+										<a href="index.php?controller=User&action=delete&id=<?php echo $user->getId() ?>" class="btn btn-sm btn-outline-danger" title="Apagar"><i class="fa fa-trash"></i></a>
 
 
 										</td>
@@ -42,10 +42,9 @@
 								?>
 							</tbody>
 						</table>
-
-					</div>
-				</div>
-
-				</div>
+			</div>
 			</div>
 		</div>
+
+
+</div>

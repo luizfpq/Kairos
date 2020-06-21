@@ -9,8 +9,6 @@ class UserView
 
   const deleteRoute = 'view/user/delete.php';
 
-  const listRoute = 'view/user/list.php';
-
   const indexRoute = 'view/user/index.php';
 
   public function __construct(){}
@@ -30,10 +28,6 @@ class UserView
     return self::deleteRoute;
   }
 
-  public function getListRoute(){
-
-    return self::listRoute;
-  }
 
   public function getIndexRoute(){
 
