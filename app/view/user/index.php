@@ -1,14 +1,16 @@
 <!-- Conteudo -->
-<div class="container">
+<div class="container container-fluid">
 		<div class="card col">
 			<div class="card-header bg-light">
 				<h5 class="card-title my-0 font-weight-normal float-left"><i class="fa fa-users"></i>&nbsp;&nbsp;&nbsp;&nbsp; Usuários</h4>
-				<a href="?controller=Schedule&action=schedule" class="btn btn-sm btn-outline-primary float-right">
+				<a href="?controller=User&action=create" class="btn btn-sm btn-outline-primary float-right">
 					<small><i class="fa fa-plus"></i></small>
 				</a>
 			</div>
-			<div class="card-body">
-			<table class="table">
+		</div>
+		<br />
+			
+		<table class="table" id="main_table" class="table table-striped table-bordered " style="width:100%">
 						  <thead>
 						    <tr>
 						      <th scope="col">Nome</th>
@@ -42,9 +44,6 @@
 								?>
 							</tbody>
 						</table>
-			</div>
-			</div>
-		</div>
 
 
 </div>
