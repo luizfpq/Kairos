@@ -31,7 +31,7 @@
 			<h5>Sobre</h5>
 			<ul class="list-unstyled text-small">
 				<li><a class="text-muted" href="#">Equipe</a></li>
-				<li><a class="text-muted" href="#"><i class="fa fa-github"></i>  Sobre o Projeto</a></li>
+				<li><a class="text-muted" href="https://github.com/luizfpq/Kairos" target="_blank"><i class="fa fa-github"></i>  Sobre o Projeto</a></li>
 				<li><a class="text-muted" href="#">Privacidade</a></li>
 				<li><a class="text-muted" href="#">Termos</a></li>
 			</ul>

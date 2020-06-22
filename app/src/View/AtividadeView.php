@@ -1,23 +1,23 @@
 <?php
 
-class ActivityView
+class AtividadeView
 {
 
-	const activityRoute = 'view/activity/index.php';
+	const atividadeRoute = 'view/atividade/index.php';
 
-	const createRoute = 'view/activity/create.php';
+	const createRoute = 'view/atividade/create.php';
 
-  	const updateRoute = 'view/activity/update.php';
+  	const updateRoute = 'view/atividade/update.php';
 
-  	const deleteRoute = 'view/activity/delete.php';
+  	const deleteRoute = 'view/atividade/delete.php';
 
-  	const listRoute = 'view/activity/list.php';
+  	const listRoute = 'view/atividade/list.php';
 
   	public function __construct(){}
 
-  	public function getActivityRoute(){
+  	public function getAtividadeRoute(){
 
-    	return self::activityRoute;
+    	return self::atividadeRoute;
   	}
 
   	public function getCreateRoute(){

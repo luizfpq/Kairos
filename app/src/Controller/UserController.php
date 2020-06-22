@@ -37,20 +37,27 @@ class UserController extends Controller
 
     if(isset($_REQUEST['submit']))
     {
-      $name = isset($_POST['name']) ? $_POST['name'] : null;
-      $description = isset($_POST['description']) ? $_POST['description'] : null;
-      $user = isset($_POST['user']) ? $_POST['user'] : null;
-      $category = isset($_POST['category']) ? $_POST['category'] : null;
+      $nome  = isset($_POST['nome']) ? $_POST['nome'] : null;
+      $senha = isset($_POST['senha']) ? sha1($_POST['senha']) : null;
+      $email = isset($_POST['email']) ? $_POST['email'] : null;
+      $tipo  = isset($_POST['tipo']) ? $_POST['tipo'] : null;
+      $nivel = isset($_POST['nivel']) ? $_POST['nivel'] : null;
+
 
       try
       {
           $warnings = array();
 
-          if(!$name)
-            $warnings[] = 'Name';
+          if(!$nome)
+            $warnings[] = 'Nome';
 
-          if(!$description)
-            $warnings [] = 'Descrição';
+          if(!$senha)
+            $warnings [] = 'Senha';
+
+          if(!$email)
+            $warnings [] = 'Email';
+
+
 
           if(sizeof($warnings))
             throw new Exception ('Preencha os campos ' . implode(', ', $warnings));
@@ -59,10 +66,10 @@ class UserController extends Controller
           $user = new User();
           $userDao = new UserDao();
 
-          $user->setName($name);
-          $user->setDescription($description);
-          $user->setUser($user);
-          $user->setCategory($category);
+          $user->setNome($nome);
+          $user->setSenha($senha);
+          $user->setEmail($email);
+          $user->setNivel($nivel);
 
 
           $userId = $userDao->create($user);
@@ -71,7 +78,7 @@ class UserController extends Controller
 
           $this->setRoute($this->view->getIndexRoute());
 
-          $message->addMessage('Setor adicionado com sucesso.');
+          $message->addMessage('Usuário adicionado com sucesso.');
       }
       catch(Exception $e)
       {

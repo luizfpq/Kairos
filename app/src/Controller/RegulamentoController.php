@@ -1,6 +1,6 @@
 <?php
 
-class CategoryController extends Controller
+class RegulamentoController extends Controller
 {
   private $view;
 
@@ -8,10 +8,10 @@ class CategoryController extends Controller
 
   public function __construct(){
 
-    $this->view = new CategoryView();
+    $this->view = new RegulamentoView();
   }
 
-  public function categoryAction(){
+  public function regulamentoAction(){
 
     $this->setRoute($this->view->getCategoryRoute());
 

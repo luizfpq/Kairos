@@ -1,49 +1,49 @@
 <div class="container container-fluid">
 		<div class="card col">
 			<div class="card-header bg-light">
-				<h5 class="card-title my-0 font-weight-normal float-left"><small><i class="fa fa-plus"></i></small> Novo usuário</h4>
+				<h5 class="card-title my-0 font-weight-normal float-left"><small><i class="fa fa-plus"></i></small> Nova atividade</h4>
 			</div>
 		</div>
 <!-- Conteudo -->
 		<div class="content col-10">
-			<form class="container" action="index.php?controller=User&action=create" method="post">
+			<form class="container" action="index.php?controller=Atividade&action=create" method="post">
 				<div class="row mb-0">
 					<div class="col">
 						<div class="form-group">
-						    <label for="nome">Nome completo</label>
-						    <input type="text" class="form-control" id="nome" name="nome">
+						    <label for="descricao">Descrição da atividade</label>
+						    <input type="text" class="form-control" id="descricao" name="descricao">
 					  	</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col">
 						<div class="form-group">
-						    <label for="senha">Senha</label>
-						    <input type="password" name="senha" class="form-control" id="senha" name="senha">
+						    <label for="carga_hr_total">Carga Horária</label>
+						    <input type="text" name="carga_hr_total" class="form-control" id="carga_hr_total">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col">
 						<div class="form-group">
-						    <label for="email">Email</label>
-						    <input type="email" name="email" class="form-control" id="email" name="email">
+						    <label for="documento">Documento</label>
+						    <input type="text" class="form-control" id="documento" name="documento">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col">
 						<div class="form-group">
-						    <label for="tipo">Tipo</label>
-						    <input type="text" name="tipo" class="form-control" id="tipo" name="tipo">
+						    <label for="id_aluno">Aluno</label>
+						    <input type="text" class="form-control" id="id_aluno" name="id_aluno" value="<?php echo $user->getId(); ?>">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col">
 						<div class="form-group">
-						    <label for="nivel">Nível</label>
-						    <input type="text" name="nivel" class="form-control" id="nivel" name="nivel">
+						    <label for="id_regulamento">Tipo de Atividade</label>
+						    <input type="text" name="id_regulamento" class="form-control" id="id_regulamento">
 						</div>
 					</div>
 				</div>

@@ -18,7 +18,7 @@ class UserDao
     $sth->bindValue(2, $user->getLogin(), PDO::PARAM_STR);
 
     $sth->bindValue(3, sha1($user->getSenha()), PDO::PARAM_STR);
-    
+
     $sth->bindValue(4, sha1($user->getEmail()), PDO::PARAM_STR);
 
     if($sth->execute())
@@ -118,7 +118,7 @@ class UserDao
     while($obj = $sth->fetch(PDO::FETCH_OBJ))
     {
       $user = new User();
-    
+
       $user->setId($obj->id_usuario);
       $user->setNome($obj->nome);
       $user->setLogin($obj->login);

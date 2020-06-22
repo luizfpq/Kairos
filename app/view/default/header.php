@@ -34,10 +34,10 @@
       </li>
       <li class="nav-item">
 	  <?php
-			if($page_subject == "Schedule")
-				echo '<a class="nav-link active" href="index.php?controller=Schedule&action=schedule"><i class="fa fa-tasks"></i> Atividades</a>';
+			if($page_subject == "Atividade")
+				echo '<a class="nav-link active" href="index.php?controller=Atividade&action=atividade"><i class="fa fa-tasks"></i> Atividades</a>';
 			else
-				echo '<a class="nav-link" href="index.php?controller=Schedule&action=schedule"> Atividades</a>';
+				echo '<a class="nav-link" href="index.php?controller=Atividade&action=atividade"> Atividades</a>';
 		?>
       </li>
       <li class="nav-item">
