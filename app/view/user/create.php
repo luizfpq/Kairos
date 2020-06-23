@@ -2,6 +2,9 @@
 		<div class="card col">
 			<div class="card-header bg-light">
 				<h5 class="card-title my-0 font-weight-normal float-left"><small><i class="fa fa-plus"></i></small> Novo usuário</h4>
+					<a href="?controller=User&action=user" class="btn btn-sm btn-outline-primary float-right">
+						<small><i class="fas fa-arrow-left" title="Voltar"></i></small>
+					</a>
 			</div>
 		</div>
 <!-- Conteudo -->
@@ -44,9 +47,9 @@
 						<div class="form-group">
 						    <label for="tipo">Tipo</label>
 						    <select name="tipo" id="tipo" class="form-control">
-								<option value="aluno">Aluno</option> 
+								<option value="aluno">Aluno</option>
 								<option value="professor">Professor</option>
-							</select>	
+							</select>
 						</div>
 					</div>
 				</div>
@@ -55,10 +58,10 @@
 						<div class="form-group">
 						    <label for="nivel">Nível</label>
 						    <select name="nivel" id="nivel" class="form-control">
-								<option value="0">Usuário</option> 
+								<option value="0">Usuário</option>
 								<option value="1">Professor</option>
 								<option value="2">Administrador</option>
-							</select>	
+							</select>
 						</div>
 					</div>
 				</div>
@@ -66,7 +69,7 @@
 					<div class="col">
 						<div class="form-group">
 						    <label for="identificador">Identificador numérico (RGA / SIAPE)</label>
-						    <input type="text" name="identificador" class="form-control" id="identificador"> 
+						    <input type="text" name="identificador" class="form-control" id="identificador">
 						</div>
 					</div>
 				</div>

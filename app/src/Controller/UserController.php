@@ -62,8 +62,8 @@ class UserController extends Controller
           if(!$identificador)
             $warnings [] = 'Identificador numérico valido (RGA/SIAPE)';
 
-            
- 
+
+
 
 
           if(sizeof($warnings))
@@ -95,9 +95,10 @@ class UserController extends Controller
       }
     }
 
-    $message->save();
+    $this->setRoute($this->view->getCreateRoute());
+    $this->showView($viewModel);
 
-    $this->showView();
+    $message->save();
 
 
 

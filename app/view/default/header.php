@@ -26,10 +26,12 @@
       </li>
 			<li class="nav-item">
 	  <?php
+	  	if($user->getNivel() >= 2){
 			if($page_subject == "User")
 				echo '<a class="nav-link active" href="index.php?controller=User&action=user"><i class="fa fa-users"></i> Usuários</a>';
 			else
 				echo '<a class="nav-link" href="index.php?controller=User&action=user"> Usuários</a>';
+			}
 		?>
       </li>
       <li class="nav-item">

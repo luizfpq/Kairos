@@ -31,7 +31,7 @@ class RegulamentoDao{
 
     $db = Database::singleton();
 
-    $sql = "SELECT * FROM tbl_regulamento WHERE id_ = ?";
+    $sql = "SELECT * FROM tbl_regulamento WHERE id_regulamento = ?";
 
     $sth = $db->prepare($sql);
 

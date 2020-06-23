@@ -34,11 +34,11 @@ class AtividadeDao{
 		$sth->bindValue(2, $atividade->getCargaHrTotal(), PDO::PARAM_STR);
 		$sth->bindValue(3, $atividade->getIdAluno(), PDO::PARAM_STR);
 		$sth->bindValue(4, $atividade->getIdRegulamento(), PDO::PARAM_STR);
-		$sth->bindValue(5, $atividade->getIdAluno(), PDO::PARAM_STR);
+		$sth->bindValue(5, $atividade->getDocumento(), PDO::PARAM_STR);
 
 		if (in_array($atividade->getIdRegulamento(), $this->atvTipoC) ) {
 			$sth->bindValue(6, $atividade->getIntervalo(), PDO::PARAM_STR);
-			
+
 		}
 
 		if($sth->execute())
@@ -87,38 +87,46 @@ class AtividadeDao{
     }
   }
 
-  public function update($atividade){
+	public function getbyAlunoId($id){
 
-    $db = Database::singleton();
+		$db = Database::singleton();
 
-    $sql = "UPDATE atividade SET name = ?, description = ?, sector = ? WHERE id = ?";
-		//$atividade->consoleLog($sql);
-    $sth = $db->prepare($sql);
-
-	$sth->bindValue(1, $atividade->getName(), PDO::PARAM_STR);
-    $sth->bindValue(2, $atividade->getDescription(), PDO::PARAM_STR);
-    $sth->bindValue(3, $atividade->getSector(), PDO::PARAM_STR);
-	$sth->bindValue(4, $atividade->getId(), PDO::PARAM_STR);
-
-    $sth->execute();
-
-  }
-
-
-  public function delete($id_usuario, $id_atividade){
-
-    $db = Database::singleton();
-
-    $sql = "select remover_atividade(?, ?)";
+		$sql = "SELECT * FROM vw_atividade WHERE id_usuario = ?";
 
     $sth = $db->prepare($sql);
 
-    $sth->bindValue(1, $id_usuario, PDO::PARAM_STR);
-		$sth->bindValue(2, $id_atividade, PDO::PARAM_STR);
+    $sth->bindValue(1, $id, PDO::PARAM_STR);
 
     $sth->execute();
 
-  }
+		$atividade = array();
+
+		while($obj = $sth->fetch(PDO::FETCH_OBJ))
+		{
+			$atividade = new Atividade();
+
+			$atividade->setIdAtividade($obj->id_atividade);
+			$atividade->setDescricao($obj->descricao);
+			$atividade->setCargaHrTotal($obj->carga_hr_total);
+			$atividade->setCarHrAproveitada($obj->car_hr_aproveitada);
+			$atividade->setStatus($obj->status);
+			$atividade->setDocumento($obj->documento);
+			$atividade->setIdRegulamento($obj->id_regulamento);
+			$atividade->setIdAluno($obj->id_usuario);
+			$atividade->setIdUsuario($obj->id_usuario);
+			$atividade->setNome($obj->nome);
+			$atividade->setLogin($obj->login);
+			$atividade->setEmail($obj->email);
+			$atividade->setNivel($obj->nivel);
+			$atividade->setSituacao($obj->situacao);
+
+			$activities[] = $atividade;
+
+		}
+
+		return $activities;
+	}
+
 
   public function getAll(){
 
@@ -157,5 +165,20 @@ class AtividadeDao{
 
     return $activities;
   }
+
+	public function delete($id_usuario, $id_atividade){
+
+		$db = Database::singleton();
+
+		$sql = "select remover_atividade(?, ?)";
+
+		$sth = $db->prepare($sql);
+
+		$sth->bindValue(1, $id_usuario, PDO::PARAM_STR);
+		$sth->bindValue(2, $id_atividade, PDO::PARAM_STR);
+
+		$sth->execute();
+
+	}
 
 }

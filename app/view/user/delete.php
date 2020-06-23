@@ -3,6 +3,9 @@
 <!-- Conteudo -->
 		<div class="content col-10">
 			<form class="container-fluid" action="index.php?controller=User&action=delete&id=<?php echo $user->getId(); ?>" method="post">
+				<a href="?controller=User&action=user" class="btn btn-sm btn-outline-primary float-right">
+					<small><i class="fas fa-arrow-left" title="Voltar"></i></small>
+				</a>
 				<div class="row">
 					<div class="col">
 						<h1><i class="fa fa-trash"></i> Remover usuário</h1>

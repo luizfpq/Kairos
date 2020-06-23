@@ -12,6 +12,9 @@
 				<div class="row">
 					<div class="col">
 						<h1><i class="fa fa-trash"></i> Remover atividade</h1>
+						<a href="?controller=Atividade&action=atividade" class="btn btn-sm btn-outline-primary float-right">
+							<small><i class="fas fa-arrow-left" title="Voltar"></i></small>
+						</a>
 						<hr>
 					</div>
 				</div>

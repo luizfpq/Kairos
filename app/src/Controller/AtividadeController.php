@@ -48,11 +48,29 @@ class AtividadeController extends Controller
     {
       $descricao = isset($_POST['descricao']) ? $_POST['descricao']: null;
       $carga_hr_total = isset($_POST['carga_hr_total']) ? $_POST['carga_hr_total']: null;
+
+
+
       $id_aluno = isset($_POST['id_aluno']) ? $_POST['id_aluno'] : null;
+
+
+      $aluno = new AlunoDao();
+      $aluno = $aluno->getById($id_aluno);
+      if ($aluno)
+        $id_aluno = $aluno->getIdAluno();
+      else {
+          throw new Exception ('Este usuário não está cadastrado na base como aluno');
+          return false;
+      }
+
+
       $id_regulamento = isset($_POST['id_regulamento']) ? $_POST['id_regulamento'] : null;
       /* @// TODO: upload form */
-      $documento = isset($_POST['documento']) ? $_POST['documento'] : null;
-
+      //$documento = isset($_POST['documento']) ? $_POST['documento'] : null;
+      // realizamos o upload e a variavel documento recebe
+      // o nome do documento em caso de sucesso
+      $myUpload = new Upload($_FILES["documento"]);
+      $documento = $myUpload->makeUpload();
 
       $data1 = date_create(isset($_POST['data1']) ? $_POST['data1'] : null);
       $data2 = date_create(isset($_POST['data2']) ? $_POST['data2'] : null);
@@ -62,8 +80,6 @@ class AtividadeController extends Controller
         $intervalo = $intervalo->format("%Y");
       if ($id_regulamento == 5)
         $intervalo = $intervalo->format("%a");;
-
-      var_dump($intervalo);
       try
       {
           $warnings = array();
@@ -80,6 +96,9 @@ class AtividadeController extends Controller
           if(!$id_regulamento)
             $warnings [] = 'Tipo de Atividade';
 
+           if(!$documento)
+            $warnings [] = 'Upload de arquivo';
+
           if ($id_regulamento == 5 || $id_regulamento == 28) {
             if(!$data1)
             $warnings [] = 'Data Inicial';
@@ -90,7 +109,7 @@ class AtividadeController extends Controller
           if(sizeof($warnings))
             throw new Exception ('Preencha os campos ' . implode(', ', $warnings));
 
-          
+
 
 
           /*$atividade = AtividadeFactory::factory($identifcationNumber, $type);
@@ -107,7 +126,9 @@ class AtividadeController extends Controller
           $atividade->setIdRegulamento($id_regulamento);
           $atividade->setDocumento($documento);
           $atividade->setIntervalo($intervalo);
-          
+
+
+
 
 
           $atividadeId = $atividadeDao->create($atividade);
@@ -131,7 +152,9 @@ class AtividadeController extends Controller
     $this->showView($viewModel);
 
     $message->save();
-
+    //limpamos o metodo post
+    unset($_POST);
+    //$_POST = array();
     // $this->setRoute($this->view->getCreateRoute());
     //
     // $this->showView();
