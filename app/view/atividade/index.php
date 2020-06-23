@@ -38,7 +38,7 @@
 										<td><?php echo $atividade->getCargaHrTotal()?></td>
 										<td><?php echo $atividade->getCarHrAproveitada()?></td>
 										<td><?php echo $atividade->getStatus()?></td>
-										<td style="text-align:center;"><a href="/app/upload/<?php echo $atividade->getDocumento()?>" class="btn btn-sm btn-outline-dark" title="Visualizar Documento" target="_blank"><i class="far fa-file-alt"></i></a></td>
+										<td style="text-align:center;"><a href="/upload/<?php echo $atividade->getDocumento()?>" class="btn btn-sm btn-outline-dark" title="Visualizar Documento" target="_blank"><i class="far fa-file-alt"></i></a></td>
 										<td>
 												<a href="index.php?controller=Atividade&action=delete&id_atividade=<?php echo $atividade->getIdAtividade() ?>&id_aluno=<?php echo $atividade->getIdAluno() ?>" class="btn btn-sm btn-outline-danger" title="Apagar"><i class="fa fa-trash"></i></a>
 												<?php if ($user->getNivel() >= 1): ?>
