@@ -26,7 +26,7 @@ class AtividadeDao{
 			$sql = 'select inserir_atividadeb (?, ?, ?, ?, ?)';
 		}
 		else if (in_array($atividade->getIdRegulamento(), $this->atvTipoC) ) {
-			$sql = 'select inserir_atividadec (?, ?, ?, ?, ?)';
+			$sql = 'select inserir_atividadec (?, ?, ?, ?, ?, ?)';
 		}
 
 		$sth = $db->prepare($sql);
@@ -36,8 +36,13 @@ class AtividadeDao{
 		$sth->bindValue(4, $atividade->getIdRegulamento(), PDO::PARAM_STR);
 		$sth->bindValue(5, $atividade->getIdAluno(), PDO::PARAM_STR);
 
+		if (in_array($atividade->getIdRegulamento(), $this->atvTipoC) ) {
+			$sth->bindValue(6, $atividade->getIntervalo(), PDO::PARAM_STR);
+			
+		}
+
 		if($sth->execute())
-      return $db->lastInsertId();
+      		return $db->lastInsertId();
 
     return false;
 
@@ -90,10 +95,10 @@ class AtividadeDao{
 		//$atividade->consoleLog($sql);
     $sth = $db->prepare($sql);
 
-		$sth->bindValue(1, $atividade->getName(), PDO::PARAM_STR);
+	$sth->bindValue(1, $atividade->getName(), PDO::PARAM_STR);
     $sth->bindValue(2, $atividade->getDescription(), PDO::PARAM_STR);
     $sth->bindValue(3, $atividade->getSector(), PDO::PARAM_STR);
-		$sth->bindValue(4, $atividade->getId(), PDO::PARAM_STR);
+	$sth->bindValue(4, $atividade->getId(), PDO::PARAM_STR);
 
     $sth->execute();
 

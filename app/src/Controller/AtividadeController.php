@@ -53,6 +53,17 @@ class AtividadeController extends Controller
       /* @// TODO: upload form */
       $documento = isset($_POST['documento']) ? $_POST['documento'] : null;
 
+
+      $data1 = date_create(isset($_POST['data1']) ? $_POST['data1'] : null);
+      $data2 = date_create(isset($_POST['data2']) ? $_POST['data2'] : null);
+      $intervalo = date_diff($data1, $data2);
+
+      if ($id_regulamento == 28)
+        $intervalo = $intervalo->format("%Y");
+      if ($id_regulamento == 5)
+        $intervalo = $intervalo->format("%a");;
+
+      var_dump($intervalo);
       try
       {
           $warnings = array();
@@ -69,9 +80,17 @@ class AtividadeController extends Controller
           if(!$id_regulamento)
             $warnings [] = 'Tipo de Atividade';
 
+          if ($id_regulamento == 5 || $id_regulamento == 28) {
+            if(!$data1)
+            $warnings [] = 'Data Inicial';
+            if(!$data2)
+            $warnings [] = 'Data Final';
+          }
+
           if(sizeof($warnings))
             throw new Exception ('Preencha os campos ' . implode(', ', $warnings));
 
+          
 
 
           /*$atividade = AtividadeFactory::factory($identifcationNumber, $type);
@@ -86,6 +105,9 @@ class AtividadeController extends Controller
           $atividade->setCargaHrTotal($carga_hr_total);
           $atividade->setIdAluno($id_aluno);
           $atividade->setIdRegulamento($id_regulamento);
+          $atividade->setDocumento($documento);
+          $atividade->setIntervalo($intervalo);
+          
 
 
           $atividadeId = $atividadeDao->create($atividade);

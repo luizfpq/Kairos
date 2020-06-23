@@ -9,7 +9,7 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "INSERT INTO tbl_usuario (nome, login, senha, email) VALUES (?,?,?,?)";
+    $sql = "select inserir_usuario (?, ?, ?, ?, ?, ?, ?)";
 
     $sth = $db->prepare($sql);
 
@@ -19,9 +19,15 @@ class UserDao
 
     $sth->bindValue(3, sha1($user->getSenha()), PDO::PARAM_STR);
 
-    $sth->bindValue(4, sha1($user->getEmail()), PDO::PARAM_STR);
+    $sth->bindValue(4, $user->getEmail(), PDO::PARAM_STR);
 
-    if($sth->execute())
+    $sth->bindValue(5, $user->getTipo(), PDO::PARAM_STR);
+
+    $sth->bindValue(6, $user->getNivel(), PDO::PARAM_STR);
+
+    $sth->bindValue(7, $user->getIdentificador(), PDO::PARAM_STR);
+
+    if($sth->execute()) 
       return $db->lastInsertId();
 
     return false;
@@ -93,7 +99,7 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "DELETE FROM tbl_usuario WHERE id_usuario = ?";
+    $sql = "select excluir_usuario(?)";
 
     $sth = $db->prepare($sql);
 

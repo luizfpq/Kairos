@@ -18,6 +18,7 @@ class Atividade
   private $locale;
   private $nivel;
   private $situacao;
+  private $intervalo;
 
 
 
@@ -411,4 +412,32 @@ class Atividade
         return $this;
     }
 
+
+
+
+    /**
+     * Get the value of Intervalo
+     *
+     * @return mixed
+     */
+    public function getIntervalo()
+    {
+        return $this->intervalo;
+    }
+
+    /**
+     * Set the value of Intervalo
+     *
+     * @param mixed $intervalo
+     *
+     * @return self
+     */
+    public function setIntervalo($intervalo)
+    {
+        $this->intervalo = $intervalo;
+
+        return $this;
+    }
+
+    
 }

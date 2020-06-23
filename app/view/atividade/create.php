@@ -47,6 +47,22 @@
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col">
+						<div class="form-group">
+						    <label for="id_regulamento">Data Inicial do evento/atividade</label>
+						    <input type="date" name="data1" class="form-control" id="data1">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="form-group">
+						    <label for="id_regulamento">Data Final do evento/atividade</label>
+						    <input type="date" name="data2" class="form-control" id="data2">
+						</div>
+					</div>
+				</div>
 
 
 				<input type="hidden" name="user" id="user" value="<?php echo $user->getId(); ?>">

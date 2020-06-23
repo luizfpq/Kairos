@@ -38,10 +38,12 @@ class UserController extends Controller
     if(isset($_REQUEST['submit']))
     {
       $nome  = isset($_POST['nome']) ? $_POST['nome'] : null;
-      $senha = isset($_POST['senha']) ? sha1($_POST['senha']) : null;
+      $login = isset($_POST['login']) ? $_POST['login'] : null;
+      $senha = isset($_POST['senha']) ? $_POST['senha'] : null;
       $email = isset($_POST['email']) ? $_POST['email'] : null;
       $tipo  = isset($_POST['tipo']) ? $_POST['tipo'] : null;
       $nivel = isset($_POST['nivel']) ? $_POST['nivel'] : null;
+      $identificador = isset($_POST['identificador']) ? $_POST['identificador'] : null;
 
 
       try
@@ -57,6 +59,11 @@ class UserController extends Controller
           if(!$email)
             $warnings [] = 'Email';
 
+          if(!$identificador)
+            $warnings [] = 'Identificador numérico valido (RGA/SIAPE)';
+
+            
+ 
 
 
           if(sizeof($warnings))
@@ -67,10 +74,12 @@ class UserController extends Controller
           $userDao = new UserDao();
 
           $user->setNome($nome);
+          $user->setLogin($login);
           $user->setSenha($senha);
           $user->setEmail($email);
+          $user->setTipo($tipo);
           $user->setNivel($nivel);
-
+          $user->setIdentificador($identificador);
 
           $userId = $userDao->create($user);
 

@@ -8,7 +8,9 @@ class User
   private $senha;
   private $email;
   private $locale;
+  private $tipo;
   private $nivel;
+  private $identificador;
   private $group = array();
 
   public function __construct() { }
@@ -30,16 +32,20 @@ class User
 
   public function getEmail() { return $this->email; }
 	public function setEmail($email) { $this->email = $email; }
-
+ 
 
   public function getLocale() { return $this->locale; }
 	public function setLocale($locale) { $this->locale = $locale; }
 
 
-  public function getNivel($nivel) {return $this->nivel;}
+  public function getNivel() {return $this->nivel;}
   public function setNivel($nivel) {$this->nivel = $nivel;}
 
+  public function getTipo() {return $this->tipo;}
+  public function setTipo($tipo) {$this->tipo = $tipo;}
 
+  public function getIdentificador() {return $this->identificador;}
+  public function setIdentificador($identificador) {$this->identificador = $identificador;}
 
 
 
