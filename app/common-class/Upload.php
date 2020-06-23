@@ -7,13 +7,13 @@
 * http://blog.vilourenco.com.br
 */
 class Upload {
-	
+
 	// Constante responsável por guardar a pasta de onde os arquivos estarão.
-	const _FOLDER_DIR = "/var/www/html/kairos/upload/";
+	const _FOLDER_DIR = "/app/upload/";
 
 	// Variável para guardar o array relacionado ao arquivo.
 	public $_file;
-	
+
 	// Método construtor que recebe o array com os arquivos via POST
 	// Verifica se já existe diretório, caso não; é criado.
 	function __construct($curFile){
@@ -40,8 +40,8 @@ class Upload {
 				}else{
 					return false;
 				}
-			}		
-		}	
+			}
+		}
 	}
 }
 ?>
