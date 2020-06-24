@@ -218,6 +218,10 @@ class AtividadeController extends Controller
   public function aprovaAction(){
 
     $id_atividade = isset($_REQUEST['id_atividade']) ? $_REQUEST['id_atividade'] : null;
+    $id_aluno = isset($_REQUEST['id_aluno']) ? $_REQUEST['id_aluno'] : null;
+
+    var_dump($id_aluno);
+    var_dump($id_atividade);
 
     $atividadeDao = new AtividadeDao();
 
@@ -226,7 +230,7 @@ class AtividadeController extends Controller
     if(isset($_REQUEST['submit']))
     {
       $this->setRoute($this->view->getAtividadeRoute());
-      $atividadeDao->aprova($id_atividade);
+      $atividadeDao->aprova($id_atividade, $id_aluno);
       $viewModel = array(
           'atividades' => $atividadeDao->getAll()
       );
@@ -249,6 +253,7 @@ class AtividadeController extends Controller
   public function reprovaAction(){
 
     $id_atividade = isset($_REQUEST['id_atividade']) ? $_REQUEST['id_atividade'] : null;
+    $id_aluno = isset($_REQUEST['id_aluno']) ? $_REQUEST['id_aluno'] : null;
 
     $atividadeDao = new AtividadeDao();
 
@@ -257,7 +262,7 @@ class AtividadeController extends Controller
     if(isset($_REQUEST['submit']))
     {
       $this->setRoute($this->view->getAtividadeRoute());
-      $atividadeDao->reprova($id_atividade);
+      $atividadeDao->reprova($id_atividade, $id_aluno);
       $viewModel = array(
           'atividades' => $atividadeDao->getAll()
       );

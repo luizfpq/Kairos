@@ -267,7 +267,7 @@ class AtividadeDao{
 
 	}
 
-	public function aprova($id_atividade){
+	public function aprova($id_atividade, $id_aluno){
 
 		$db = Database::singleton();
 
@@ -279,10 +279,21 @@ class AtividadeDao{
 
 		$sth->execute();
 
+
+		/* verifica se o aluno foi aprovado */
+		$db = Database::singleton();
+		$sql = "select aprova_aluno(?)";
+
+		$sth = $db->prepare($sql);
+
+		$sth->bindValue(1, $id_aluno, PDO::PARAM_STR);
+
+		$sth->execute();
+
 	}
 
 
-		public function reprova($id_atividade){
+		public function reprova($id_atividade, $id_aluno){
 
 			$db = Database::singleton();
 
@@ -291,6 +302,16 @@ class AtividadeDao{
 			$sth = $db->prepare($sql);
 
 			$sth->bindValue(1, $id_atividade, PDO::PARAM_STR);
+
+			$sth->execute();
+
+			/* verifica se o aluno foi aprovado */
+			$db = Database::singleton();
+			$sql = "select aprova_aluno(?)";
+
+			$sth = $db->prepare($sql);
+
+			$sth->bindValue(1, $id_aluno, PDO::PARAM_STR);
 
 			$sth->execute();
 

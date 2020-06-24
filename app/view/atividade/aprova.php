@@ -27,7 +27,7 @@
 					</div>
 
 				</div>
-
+				<input type="hidden" name="id_aluno" id="id_aluno" value="<?php echo $atividade->getIdAluno(); ?>"
 				<div class="row">
 					<button type="submit" class="col activities btn btn-lg btn-danger" name="submit"> Confirmar</button>
 				</div>

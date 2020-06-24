@@ -40,6 +40,27 @@
 		</div>
 	</div>
 
+<?php
+	if ($aluno->getSituacao() == 'aprovado') {
+				echo"
+					<div class=\"card col\">
+						<div class=\"card-header alert alert-success\">
+							<h5 class=\"card-title my-0 font-weight-normal \">&nbsp;&nbsp;&nbsp;&nbsp;Aluno Aprovado&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+
+						</div>
+					</div>";
+	} else if ($aluno->getSituacao() == 'reprovado') {
+		echo"
+			<div class=\"card col\">
+				<div class=\"card-header alert alert-danger\">
+					<h5 class=\"card-title my-0 font-weight-normal \">&nbsp;&nbsp;&nbsp;&nbsp;Aluno Reprovado&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+
+				</div>
+			</div>";
+	}
+
+ ?>
+
 	<div class="card col">
 		<div class="card-header bg-light">
 			<h5 class="card-title my-0 font-weight-normal float-left"><i class="fa fa-tasks"></i>&nbsp;&nbsp;&nbsp;&nbsp; Atividades Pendentes</h4>
