@@ -58,10 +58,7 @@ class AtividadeController extends Controller
       $aluno = $aluno->getById($id_aluno);
       if ($aluno)
         $id_aluno = $aluno->getIdAluno();
-      else {
-          throw new Exception ('Este usuário não está cadastrado na base como aluno');
-          return false;
-      }
+
 
 
       $id_regulamento = isset($_POST['id_regulamento']) ? $_POST['id_regulamento'] : null;
@@ -218,6 +215,75 @@ class AtividadeController extends Controller
     $this->showView($viewModel);
 
   }
+  public function aprovaAction(){
+
+    $id_atividade = isset($_REQUEST['id_atividade']) ? $_REQUEST['id_atividade'] : null;
+
+    $atividadeDao = new AtividadeDao();
+
+    $viewModel = false;
+
+    if(isset($_REQUEST['submit']))
+    {
+      $this->setRoute($this->view->getAtividadeRoute());
+      $atividadeDao->aprova($id_atividade);
+      $viewModel = array(
+          'atividades' => $atividadeDao->getAll()
+      );
+
+    }
+    else
+    {
+      $this->setRoute($this->view->getAprovaRoute());
+
+      $viewModel = array(
+          'atividade' => $atividadeDao->getById($id_atividade)
+      );
+
+    }
+
+    $this->showView($viewModel);
+
+  }
+
+  public function reprovaAction(){
+
+    $id_atividade = isset($_REQUEST['id_atividade']) ? $_REQUEST['id_atividade'] : null;
+
+    $atividadeDao = new AtividadeDao();
+
+    $viewModel = false;
+
+    if(isset($_REQUEST['submit']))
+    {
+      $this->setRoute($this->view->getAtividadeRoute());
+      $atividadeDao->reprova($id_atividade);
+      $viewModel = array(
+          'atividades' => $atividadeDao->getAll()
+      );
+
+    }
+    else
+    {
+      $this->setRoute($this->view->getReprovaRoute());
+
+      $viewModel = array(
+          'atividade' => $atividadeDao->getById($id_atividade)
+      );
+
+    }
+
+    $this->showView($viewModel);
+
+  }
+
+
+
+
+
+
+
+
 
   public function updateAction(){
 

@@ -145,6 +145,8 @@ class UserController extends Controller
 
   public function updateAction(){
 
+    $message = Message::singleton();
+
     $viewModel = false;
 
     $id = isset($_REQUEST['id']) ? $_REQUEST['id'] : null;
@@ -152,25 +154,56 @@ class UserController extends Controller
 
     if(isset($_REQUEST['submit']))
     {
+      $nome  = isset($_POST['nome']) ? $_POST['nome'] : null;
+      $login = isset($_POST['login']) ? $_POST['login'] : null;
+      $senha = isset($_POST['senha']) ? $_POST['senha'] : null;
+      $email = isset($_POST['email']) ? $_POST['email'] : null;
+      $tipo  = isset($_POST['tipo']) ? $_POST['tipo'] : null;
+      $nivel = isset($_POST['nivel']) ? $_POST['nivel'] : null;
+      $id_usuario = isset($_POST['id_usuario']) ? $_POST['id_usuario'] : null;
 
-      $name = isset($_REQUEST['name']) ? $_REQUEST['name'] : '';
-      $description = isset($_REQUEST['description']) ? $_REQUEST['description'] : '';
-
-      $user = new User();
-      $user->setName($name);
-      $user->setDescription($description);
-      $user->setId($id);
 
 
-      $userDao = new UserDao();
-      $userDao->update($user);
+      try
+      {
+          $warnings = array();
 
-      $this->setRoute($this->view->getIndexRoute());
+          if(!$nome)
+            $warnings[] = 'Nome';
+          if(!$email)
+            $warnings [] = 'Email';
 
-      $viewModel = array(
-        'users' => $userDao->getAll()
-      );
+          if(sizeof($warnings))
+            throw new Exception ('Preencha os campos ' . implode(', ', $warnings));
 
+
+          $user = new User();
+          $userDao = new UserDao();
+
+          $user->setNome($nome);
+          $user->setLogin($login);
+          $user->setSenha($senha);
+          $user->setEmail($email);
+          $user->setTipo($tipo);
+          $user->setNivel($nivel);
+          $user->setId($id_usuario);
+
+          $userId = $userDao->update($user);
+
+          $user->setId($userId);
+
+          $this->setRoute($this->view->getIndexRoute());
+
+          $message->addMessage('Usuário atualizado com sucesso.');
+
+          header("Location: index.php?controller=User&action=user");
+          die();
+
+      }
+      catch(Exception $e)
+      {
+        $message->addWarning($e->getMessage());
+      }
     }
     else
     {
@@ -182,6 +215,8 @@ class UserController extends Controller
           'user' => $userDao->getById($id)
       );
     }
+
+
 
     $this->showView($viewModel);
 

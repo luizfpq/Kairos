@@ -11,6 +11,10 @@ class AtividadeView
 
   	const deleteRoute = 'view/atividade/delete.php';
 
+		const aprovaRoute = 'view/atividade/aprova.php';
+
+		const reprovaRoute = 'view/atividade/reprova.php';
+
   	const listRoute = 'view/atividade/list.php';
 
   	public function __construct(){}
@@ -40,5 +44,14 @@ class AtividadeView
 	    return self::listRoute;
 	  }
 
+		public function getAprovaRoute(){
+
+			return self::aprovaRoute;
+		}
+
+		public function getReprovaRoute(){
+
+	    return self::reprovaRoute;
+	  }
 
 }

@@ -13,11 +13,8 @@
 		<table class="table" id="main_table" class="table table-striped table-bordered " style="width:100%">
 						  <thead>
 						    <tr>
-						      <th scope="col">Descrição</th>
-						      <th scope="col">CH Total</th>
-						      <th scope="col">CH Aproveitada</th>
-									<th scope="col">Status</th>
-									<th scope="col">Documento</th>
+						      <th scope="col">Atividade</th>
+						      <th scope="col">Resumo</th>
 									<th scope="col">Ações</th>
 						    </tr>
 						  </thead>
@@ -35,14 +32,19 @@
 
 									<tr>
 										<td><?php echo $atividade->getDescricao() . "<br /><small>" . $atividade->getNome() . "</small>"; ?></td>
-										<td><?php echo $atividade->getCargaHrTotal()?></td>
-										<td><?php echo $atividade->getCarHrAproveitada()?></td>
-										<td><?php echo $atividade->getStatus()?></td>
-										<td style="text-align:center;"><a href="/upload/<?php echo $atividade->getDocumento()?>" class="btn btn-sm btn-outline-dark" title="Visualizar Documento" target="_blank"><i class="far fa-file-alt"></i></a></td>
 										<td>
+											<?php
+											 	echo "<small>Total:</small> ". $atividade->getCargaHrTotal() . "<br />" .
+												 "<small>Aproveitada:</small> " . $atividade->getCarHrAproveitada() . "<br />" .
+												 "<small>Status:</small> " .$atividade->getStatus();
+											?>
+										</td>
+										<td>
+											<a href="<?php echo "upload/" . $atividade->getDocumento()?>" class="btn btn-sm btn-outline-dark" title="Visualizar Documento" target="_blank"><i class="far fa-file-alt"></i></a>
 												<a href="index.php?controller=Atividade&action=delete&id_atividade=<?php echo $atividade->getIdAtividade() ?>&id_aluno=<?php echo $atividade->getIdAluno() ?>" class="btn btn-sm btn-outline-danger" title="Apagar"><i class="fa fa-trash"></i></a>
 												<?php if ($user->getNivel() >= 1): ?>
-														<a href="index.php?controller=Atividade&action=Approve&id_atividade=<?php echo $atividade->getIdAtividade() ?>&id_aluno=<?php echo $atividade->getIdAluno() ?>" class="btn btn-sm btn-outline-success" title="Aprovar"><i class="far fa-thumbs-up"></i></i></a>
+														<a href="index.php?controller=Atividade&action=aprova&id_atividade=<?php echo $atividade->getIdAtividade() ?>" class="btn btn-sm btn-outline-success" title="Aprovar"><i class="far fa-thumbs-up"></i></i></a>
+														<a href="index.php?controller=Atividade&action=reprova&id_atividade=<?php echo $atividade->getIdAtividade() ?>" class="btn btn-sm btn-outline-warning" title="Reprovar"><i class="far fa-thumbs-down"></i></i></a>
 												<?php endif; ?>
 
 

@@ -9,6 +9,7 @@ class Atividade
   private $status;
   private $documento;
   private $id_regulamento;
+  private $tipo_regulamento;
   private $id_aluno;
   private $id_usuario;
   private $nome;
@@ -439,5 +440,30 @@ class Atividade
         return $this;
     }
 
-    
+
+
+    /**
+     * Get the value of Tipo Regulamento
+     *
+     * @return mixed
+     */
+    public function getTipoRegulamento()
+    {
+        return $this->tipo_regulamento;
+    }
+
+    /**
+     * Set the value of Tipo Regulamento
+     *
+     * @param mixed $tipo_regulamento
+     *
+     * @return self
+     */
+    public function setTipoRegulamento($tipo_regulamento)
+    {
+        $this->tipo_regulamento = $tipo_regulamento;
+
+        return $this;
+    }
+
 }

@@ -27,7 +27,7 @@ class UserDao
 
     $sth->bindValue(7, $user->getIdentificador(), PDO::PARAM_STR);
 
-    if($sth->execute()) 
+    if($sth->execute())
       return $db->lastInsertId();
 
     return false;
@@ -65,35 +65,45 @@ class UserDao
 
     $db = Database::singleton();
 
-    $sql = "UPDATE tbl_usuario SET nome = ?, login = ?, email =  ?, nivel = ? WHERE id = ?";
+    if ($user->getSenha() == null) {
+      $sql = "UPDATE tbl_usuario SET nome = ?, login = ?, email =  ?, nivel = ? WHERE id_usuario = ?";
+    } else {
+      $sql = "UPDATE tbl_usuario SET nome = ?, login = ?, email =  ?, nivel = ?, senha = ? WHERE id_usuario = ?";
+
+    }
 
     $sth = $db->prepare($sql);
 
     $sth->bindValue(1, $user->getNome(), PDO::PARAM_STR);
-    $sth->bindValue(2, sha1($user->getLogin()), PDO::PARAM_STR);
+
+    $sth->bindValue(2, $user->getLogin(), PDO::PARAM_STR);
     $sth->bindValue(3, $user->getEmail(), PDO::PARAM_STR);
     $sth->bindValue(4, $user->getNivel(), PDO::PARAM_STR);
-    $sth->bindValue(5, $user->getId(), PDO::PARAM_STR);
+
+
+    if ($user->getSenha() == null) {
+      $sth->bindValue(5, $user->getId(), PDO::PARAM_STR);
+    } else {
+      $sth->bindValue(5, sha1($user->getSenha()), PDO::PARAM_STR);
+      $sth->bindValue(6, $user->getId(), PDO::PARAM_STR);
+    }
 
     $sth->execute();
 
-  }
 
-  public function setLocale($user){
+    var_dump($sql);
+    var_dump($user->getNome());
+    var_dump($user->getLogin());
+    var_dump($user->getEmail());
+    var_dump($user->getNivel());
+    var_dump($user->getSenha());
+    var_dump($user->getId());
 
-    $db = Database::singleton();
 
-    $sql = "UPDATE tbl_usuario SET locale = ? WHERE id_usuario = ? ";
 
-    $sth = $db->prepare($sql);
-
-    $sth->bindValue(1, $user->getLocale(), PDO::PARAM_STR);
-
-    $sth->bindValue(2, $user->getId(), PDO::PARAM_STR);
-
-    $sth->execute();
 
   }
+
 
   public function delete($id_usuario){
 

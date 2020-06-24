@@ -41,10 +41,10 @@
 							<select class="form-control" id="id_aluno" name="id_aluno">
 						    <?php
 								if ($user->getNivel() >= 1){
-									$usu = new UserDao();
+									$usu = new AlunoDao();
 									$usuarios = $usu->getAll();
 									foreach($usuarios as $usuario) :
-										echo "<option value='{$usuario->getId()}'>{$usuario->getNome()}</option>";
+										echo "<option value='{$usuario->getIdUsuario()}'>{$usuario->getNome()}</option>";
 									endforeach;
 								} else {
 									echo "<option value='{$user->getId()}'>{$user->getNome()}</option>";

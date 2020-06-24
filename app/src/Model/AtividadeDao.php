@@ -75,7 +75,8 @@ class AtividadeDao{
 			$atividade->setStatus($obj->status);
 			$atividade->setDocumento($obj->documento);
 			$atividade->setIdRegulamento($obj->id_regulamento);
-			$atividade->setIdAluno($obj->id_usuario);
+			$atividade->setTipoRegulamento($obj->tipo);
+			$atividade->setIdAluno($obj->id_aluno);
 			$atividade->setIdUsuario($obj->id_usuario);
 			$atividade->setNome($obj->nome);
 			$atividade->setLogin($obj->login);
@@ -86,6 +87,89 @@ class AtividadeDao{
       return $atividade;
     }
   }
+
+	public function getByStatusAlunoId($id, $status){
+
+		$db = Database::singleton();
+
+		$sql = "SELECT * FROM vw_atividade WHERE id_usuario = ? and status = ?";
+
+    $sth = $db->prepare($sql);
+
+    $sth->bindValue(1, $id, PDO::PARAM_STR);
+		$sth->bindValue(2, $status, PDO::PARAM_STR);
+
+    $sth->execute();
+
+		$atividade = array();
+
+		while($obj = $sth->fetch(PDO::FETCH_OBJ))
+		{
+			$atividade = new Atividade();
+
+			$atividade->setIdAtividade($obj->id_atividade);
+			$atividade->setDescricao($obj->descricao);
+			$atividade->setCargaHrTotal($obj->carga_hr_total);
+			$atividade->setCarHrAproveitada($obj->car_hr_aproveitada);
+			$atividade->setStatus($obj->status);
+			$atividade->setDocumento($obj->documento);
+			$atividade->setIdRegulamento($obj->id_regulamento);
+			$atividade->setTipoRegulamento($obj->tipo);
+			$atividade->setIdAluno($obj->id_aluno);
+			$atividade->setIdUsuario($obj->id_usuario);
+			$atividade->setNome($obj->nome);
+			$atividade->setLogin($obj->login);
+			$atividade->setEmail($obj->email);
+			$atividade->setNivel($obj->nivel);
+			$atividade->setSituacao($obj->situacao);
+
+			$activities[] = $atividade;
+
+		}
+
+		return $activities;
+	}
+
+	public function getByStatusAll($status){
+
+		$db = Database::singleton();
+
+		$sql = "SELECT * FROM vw_atividade WHERE status = ?";
+
+    $sth = $db->prepare($sql);
+
+		$sth->bindValue(1, $status, PDO::PARAM_STR);
+
+    $sth->execute();
+
+		$atividade = array();
+
+		while($obj = $sth->fetch(PDO::FETCH_OBJ))
+		{
+			$atividade = new Atividade();
+
+			$atividade->setIdAtividade($obj->id_atividade);
+			$atividade->setDescricao($obj->descricao);
+			$atividade->setCargaHrTotal($obj->carga_hr_total);
+			$atividade->setCarHrAproveitada($obj->car_hr_aproveitada);
+			$atividade->setStatus($obj->status);
+			$atividade->setDocumento($obj->documento);
+			$atividade->setIdRegulamento($obj->id_regulamento);
+			$atividade->setTipoRegulamento($obj->tipo);
+			$atividade->setIdAluno($obj->id_aluno);
+			$atividade->setIdUsuario($obj->id_usuario);
+			$atividade->setNome($obj->nome);
+			$atividade->setLogin($obj->login);
+			$atividade->setEmail($obj->email);
+			$atividade->setNivel($obj->nivel);
+			$atividade->setSituacao($obj->situacao);
+
+			$activities[] = $atividade;
+
+		}
+
+		return $activities;
+	}
 
 	public function getbyAlunoId($id){
 
@@ -112,7 +196,8 @@ class AtividadeDao{
 			$atividade->setStatus($obj->status);
 			$atividade->setDocumento($obj->documento);
 			$atividade->setIdRegulamento($obj->id_regulamento);
-			$atividade->setIdAluno($obj->id_usuario);
+			$atividade->setTipoRegulamento($obj->tipo);
+			$atividade->setIdAluno($obj->id_aluno);
 			$atividade->setIdUsuario($obj->id_usuario);
 			$atividade->setNome($obj->nome);
 			$atividade->setLogin($obj->login);
@@ -151,7 +236,8 @@ class AtividadeDao{
 			$atividade->setStatus($obj->status);
 			$atividade->setDocumento($obj->documento);
 			$atividade->setIdRegulamento($obj->id_regulamento);
-			$atividade->setIdAluno($obj->id_usuario);
+			$atividade->setTipoRegulamento($obj->tipo);
+			$atividade->setIdAluno($obj->id_aluno);
 			$atividade->setIdUsuario($obj->id_usuario);
 			$atividade->setNome($obj->nome);
 			$atividade->setLogin($obj->login);
@@ -180,5 +266,34 @@ class AtividadeDao{
 		$sth->execute();
 
 	}
+
+	public function aprova($id_atividade){
+
+		$db = Database::singleton();
+
+		$sql = "update tbl_atividade set status = 'aprovada' where id_atividade = ?";
+
+		$sth = $db->prepare($sql);
+
+		$sth->bindValue(1, $id_atividade, PDO::PARAM_STR);
+
+		$sth->execute();
+
+	}
+
+
+		public function reprova($id_atividade){
+
+			$db = Database::singleton();
+
+			$sql = "update tbl_atividade set status = 'reprovada' where id_atividade = ?";
+
+			$sth = $db->prepare($sql);
+
+			$sth->bindValue(1, $id_atividade, PDO::PARAM_STR);
+
+			$sth->execute();
+
+		}
 
 }

@@ -9,7 +9,7 @@
 class Upload {
 
 	// Constante responsável por guardar a pasta de onde os arquivos estarão.
-	const _FOLDER_DIR = "/app/upload/";
+	const _FOLDER_DIR = BASE_PATH."/upload/";
 
 	// Variável para guardar o array relacionado ao arquivo.
 	public $_file;
@@ -33,10 +33,10 @@ class Upload {
 	function makeUpload(){
 		if(isset($this->_file)){
 			$randomName = md5(rand(00,9999999));
-			$fileName = self::_FOLDER_DIR . "_" . $randomName . "_" . trim($this->_file["name"]);
+			$fileName = trim(self::_FOLDER_DIR . "_" . $randomName . "_" . $this->_file["name"]);
 			if(is_uploaded_file($this->_file["tmp_name"])){
 				if(move_uploaded_file($this->_file["tmp_name"], $fileName)){
-					return "_" . $randomName . "_" . trim($this->_file["name"]);
+					return trim("_" . $randomName . "_" . $this->_file["name"]);
 				}else{
 					return false;
 				}

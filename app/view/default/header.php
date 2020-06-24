@@ -8,6 +8,9 @@
   <a class="navbar-brand" href="index.php?controller=Index&action=index">
 	<img src="assets/img/logo-2.png" alt="" width="36" height="36" class="float-left"> &nbsp; Kair&oacute;s
   </a>
+	<span class="navbar-text">
+    Bem vind@, <?php echo $user->getLogin(); ?>
+  </span>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
