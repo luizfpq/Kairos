@@ -1,0 +1,4 @@
+INSERT INTO public.tbl_usuario (id_usuario, nome, login, senha, email, locale, nivel) VALUES (1, 'Admin', 'Administrador', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'admin@email.com', 'pt_BR', 2);
+INSERT INTO public.tbl_usuario (id_usuario, nome, login, senha, email, locale, nivel) VALUES (31, 'Luiz Fernando Postingel Quirino', 'Quirino', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'luizfpq@gmail.com', 'pt_BR', 0);
+INSERT INTO public.tbl_usuario (id_usuario, nome, login, senha, email, locale, nivel) VALUES (32, 'Lucas Padilha', 'Padilha', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'padilha@email.com', 'pt_BR', 0);
+INSERT INTO public.tbl_usuario (id_usuario, nome, login, senha, email, locale, nivel) VALUES (34, 'Ivone Penque Matsuno', 'Ivone', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'ivone.matsuno@ufms.br', 'pt_BR', 1);

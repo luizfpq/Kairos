@@ -1,4 +1,4 @@
-create function remover_atividade(usuario integer, atividade integer) returns void
+create function remover_atividade(usuario bigint, atividade integer) returns void
     language plpgsql
 as
 $$
@@ -6,13 +6,13 @@ declare doc integer := 0;
 declare regulamento integer := 0;
 declare bag varchar :='';
 BEGIN
-  
-regulamento:= (select tbl_atividade.id_regulamento 
+
+regulamento:= (select tbl_atividade.id_regulamento
 	   from tbl_atividade
 	   where
 	   tbl_atividade.id_atividade = atividade);
 
-delete from tbl_atividade 
+delete from tbl_atividade
 where tbl_atividade.id_atividade = atividade;
 
  bag:= (select update_ch_regulamento(usuario,regulamento));
@@ -20,7 +20,3 @@ where tbl_atividade.id_atividade = atividade;
 END;
 
 $$;
-
-alter function remover_atividade(integer, integer) owner to zvraimhwsxhxda;
-
-

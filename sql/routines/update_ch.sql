@@ -1,4 +1,4 @@
-create function update_ch(usuario integer, reg integer) returns void
+create function update_ch(usuario bigint, reg integer) returns void
     language plpgsql
 as
 $$
@@ -25,7 +25,3 @@ bag:= (select update_ch_regulamento(usuario,reg));
 END;
 
 $$;
-
-alter function update_ch(integer, integer) owner to zvraimhwsxhxda;
-
-

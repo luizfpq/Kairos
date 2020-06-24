@@ -1,4 +1,4 @@
-create function update_ch_percentual(usuario integer, reg integer, carga_hr_digitada integer, atividade integer) returns void
+create function update_ch_percentual(usuario bigint, reg integer, carga_hr_digitada integer, atividade integer) returns void
     language plpgsql
 as
 $$
@@ -33,7 +33,3 @@ bag:= (select update_ch_regulamento(usuario,reg));
 END;
 
 $$;
-
-alter function update_ch_percentual(integer, integer, integer, integer) owner to zvraimhwsxhxda;
-
-

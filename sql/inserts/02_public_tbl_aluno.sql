@@ -1,0 +1,2 @@
+INSERT INTO public.tbl_aluno (id_aluno, situacao, id_usuario) VALUES (201607430001, 'Pendente', 32);
+INSERT INTO public.tbl_aluno (id_aluno, situacao, id_usuario) VALUES (201604370037, 'pendente', 31);

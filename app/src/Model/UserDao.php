@@ -91,17 +91,6 @@ class UserDao
     $sth->execute();
 
 
-    var_dump($sql);
-    var_dump($user->getNome());
-    var_dump($user->getLogin());
-    var_dump($user->getEmail());
-    var_dump($user->getNivel());
-    var_dump($user->getSenha());
-    var_dump($user->getId());
-
-
-
-
   }
 
 

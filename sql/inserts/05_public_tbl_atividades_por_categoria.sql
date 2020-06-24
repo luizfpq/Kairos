@@ -1,0 +1,9 @@
+INSERT INTO public.tbl_atividades_por_categoria (id_atv_cat, id_aluno, id_regulamento, ch_total) VALUES (23, 201604370037, 13, 28.00);
+INSERT INTO public.tbl_atividades_por_categoria (id_atv_cat, id_aluno, id_regulamento, ch_total) VALUES (24, 201604370037, 6, 9.00);
+INSERT INTO public.tbl_atividades_por_categoria (id_atv_cat, id_aluno, id_regulamento, ch_total) VALUES (26, 201604370037, 9, 12.00);
+INSERT INTO public.tbl_atividades_por_categoria (id_atv_cat, id_aluno, id_regulamento, ch_total) VALUES (27, 201604370037, 3, 12.00);
+INSERT INTO public.tbl_atividades_por_categoria (id_atv_cat, id_aluno, id_regulamento, ch_total) VALUES (28, 201604370037, 1, 24.00);
+INSERT INTO public.tbl_atividades_por_categoria (id_atv_cat, id_aluno, id_regulamento, ch_total) VALUES (30, 201604370037, 5, 1.00);
+INSERT INTO public.tbl_atividades_por_categoria (id_atv_cat, id_aluno, id_regulamento, ch_total) VALUES (29, 201604370037, 28, 68.00);
+INSERT INTO public.tbl_atividades_por_categoria (id_atv_cat, id_aluno, id_regulamento, ch_total) VALUES (25, 201607430001, 6, 21.00);
+INSERT INTO public.tbl_atividades_por_categoria (id_atv_cat, id_aluno, id_regulamento, ch_total) VALUES (32, 201607430001, 28, 34.00);

@@ -1,16 +1,19 @@
-create view vw_aluno (id_usuario, nome, login, senha, email, locale, nivel, id_aluno, situacao) as
-SELECT usu.id_usuario,
-       usu.nome,
-       usu.login,
-       usu.senha,
-       usu.email,
-       usu.locale,
-       usu.nivel,
-       aluno.id_aluno,
-       aluno.situacao
-FROM tbl_usuario usu,
-     tbl_aluno aluno
-WHERE usu.id_usuario = aluno.id_usuario;
+create table tbl_usuario
+(
+	id_usuario serial not null
+		constraint tbl_usuario_pk
+			primary key,
+	nome varchar(256) not null,
+	login varchar(56),
+	senha varchar(40) not null,
+	email varchar not null,
+	locale varchar default 'pt_BR'::character varying,
+	nivel integer default 0
+);
 
-alter table vw_aluno
-    owner to zvraimhwsxhxda;
+
+create unique index tbl_usuario_id_usuario_uindex
+	on tbl_usuario (id_usuario);
+
+create unique index tbl_usuario_email_uindex
+	on tbl_usuario (email);

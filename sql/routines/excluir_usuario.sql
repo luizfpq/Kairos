@@ -1,4 +1,4 @@
-create function excluir_usuario(id_usuario_digitado integer) returns void
+create function excluir_usuario(id_usuario_digitado bigint) returns void
     language plpgsql
 as
 $$
@@ -16,6 +16,3 @@ end if;
 END;
 
 $$;
-
-alter function excluir_usuario(integer) owner to zvraimhwsxhxda;
-

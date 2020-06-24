@@ -1,4 +1,4 @@
-create function update_ch_regulamento(usuario integer, reg integer) returns void
+create function update_ch_regulamento(usuario bigint, reg integer) returns void
     language plpgsql
 as
 $$
@@ -43,7 +43,3 @@ END IF;
 END;
 
 $$;
-
-alter function update_ch_regulamento(integer, integer) owner to zvraimhwsxhxda;
-
-
