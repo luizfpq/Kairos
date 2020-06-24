@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>be244fe6-f72f-41c0-85eb-126e0b921e1a.DATABASE:deg42btap8des9</OriginalElement>
+  <nodes>
+    <node x="342.5" y="248.0">be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_aluno</node>
+    <node x="519.5" y="259.0">be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_professor</node>
+    <node x="431.75" y="0.0">be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_usuario</node>
+    <node x="519.6581196581196" y="355.40170940170947">be244fe6-f72f-41c0-85eb-126e0b921e1a.VIEW:deg42btap8des9.public.vw_aluno</node>
+    <node x="0.0" y="408.0">be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_atividade</node>
+    <node x="229.0" y="452.0">be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_atividades_por_categoria</node>
+    <node x="718.5" y="0.0">be244fe6-f72f-41c0-85eb-126e0b921e1a.VIEW:deg42btap8des9.public.vw_atividade</node>
+    <node x="58.0" y="237.0">be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_regulamento</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_atividades_por_categoria" target="be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_regulamento">
+      <point x="-64.0" y="-60.5" />
+      <point x="293.0" y="383.0" />
+      <point x="197.5" y="383.0" />
+      <point x="46.5" y="60.5" />
+    </edge>
+    <edge source="be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_professor" target="be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_usuario">
+      <point x="0.0" y="-38.5" />
+      <point x="596.5" y="212.0" />
+      <point x="547.25" y="212.0" />
+      <point x="38.5" y="93.5" />
+    </edge>
+    <edge source="be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_atividade" target="be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_regulamento">
+      <point x="0.0" y="-104.5" />
+      <point x="-46.5" y="60.5" />
+    </edge>
+    <edge source="be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_atividades_por_categoria" target="be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_aluno">
+      <point x="64.0" y="-60.5" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_aluno" target="be244fe6-f72f-41c0-85eb-126e0b921e1a.TABLE:deg42btap8des9.public.tbl_usuario">
+      <point x="0.0" y="-49.5" />
+      <point x="421.0" y="212.0" />
+      <point x="470.25" y="212.0" />
+      <point x="-38.5" y="93.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="464.0" y="308.5" />
+  <SelectedNodes>
+    <node>be244fe6-f72f-41c0-85eb-126e0b921e1a.VIEW:deg42btap8des9.public.vw_aluno</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Key columns</Category>
+    <Category>Columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

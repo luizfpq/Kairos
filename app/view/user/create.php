@@ -21,7 +21,7 @@
 				<div class="row mb-0">
 					<div class="col">
 						<div class="form-group">
-						    <label for="login" title="Use um nome curto pelo qual será identificado na interface do sistema">Login</label>
+						    <label for="login" title="Use um nome curto pelo qual será identificado na interface do sistema">Nome de Tratamento</label>
 						    <input type="text" class="form-control" id="login" name="login">
 					  	</div>
 					</div>
