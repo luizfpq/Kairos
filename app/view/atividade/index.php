@@ -31,7 +31,9 @@
 								?>
 
 									<tr>
-										<td><?php echo $atividade->getDescricao() . "<br /><small>" . $atividade->getNome() . "</small>"; ?></td>
+										<td><?php echo $atividade->getDescricao() . "<br /><small>"
+										 . $atividade->getNome() . "</small><br />"
+										  . "<small>" .$atividade->getTipoRegulamento() . "</small>" ;?></td>
 										<td>
 											<?php
 											 	echo "<small>Total:</small> ". $atividade->getCargaHrTotal() . "<br />" .
