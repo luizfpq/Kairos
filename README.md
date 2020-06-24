@@ -30,9 +30,12 @@ Kairós e o conceito grego do tempo útil, a história de Kairós, filho de Cron
 #### Tecnologias Utilizadas
 
  - [VSCode](https://code.visualstudio.com/)
+ - [Atom](https://atom.io/)
  - [Heroku](https://heroku.com/)
  - [PHP](https://php.net/)
  - [PostgreSQL](https://postgresql.org/)
+ - [DataGrip](https://www.jetbrains.com/pt-br/datagrip/)
+ - [dBeaver](https://dbeaver.com/)
  - [Trello](https://trello.com/b/5IWCaqvt/projeto-kair%C3%B3s)
  - [brModelo](http://sis4.com/brModelo/)
  - [Lebre](https://github.com/luizfpq/lebre)
