@@ -42,12 +42,12 @@ class Database
 */	 
 
 	private $array = array ('sgbd'		=> 'PostgreSQL',
-									'host'		=> 'ec2-34-204-22-76.compute-1.amazonaws.com',
-									'name'		=> 'deg42btap8des9',
+									'host'		=> 'ec2-18-209-153-180.compute-1.amazonaws.com',
+									'name'		=> 'da1lj12uim6lgd',
 									'port'		=> '5432',
 									'schema'	=> 'public',
-									'user'		=> 'zvraimhwsxhxda',
-									'password' 	=> 'dae41e947cb2c5c568e1d05b5b358ac6090772fafca39695a099784de13b7225');
+									'user'		=> 'fphmkvpaqquraj',
+									'password' 	=> '4eeeb851f0cace4a352af418a741a6d68f29b62a8737a38ddea54e1888f383b6');
 
 	/**
 	 * Class constructor.
